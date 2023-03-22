@@ -3,15 +3,13 @@
 <span class="sr-only">{{group.frame2.txt}}</span>
 <div id="f2-container" class="full-size" aria-hidden="true">
 	<div id="f2-letter-line1" class="letter-line-container">
-		
 		{{#each group.frame2.line1}}
-		<div class="letter-box"><span {{#isHiddenLetter .. 'line1' @index}}class="hide-letter" {{/isHiddenLetter}}id="letter{{int @index}}">{{{.}}}</span></div>
-		{{!-- <div class="letter-box"><span id="letter{{int @index}}">{{{.}}}</span></div> --}}
+		<div class="letter-box"><span class="{{getLetterClass .. (int @index)}}" id="letter{{int @index}}">{{{.}}}</span></div>
 		{{/each}}
 	</div>
 	<div id="f2-letter-line2" class="letter-line-container">
-		{{#each group.frame2.line2 num=(letterCount @index)}}
-		<div class="letter-box"><span {{#isHiddenLetter .. 'line2' @index}}class="hide-letter" {{/isHiddenLetter}}id="letter{{letterCount @index}}">{{{.}}}</span></div>
+		{{#each group.frame2.line2 }}
+		<div class="letter-box"><span class="{{getLetterClass .. (letterCount @index)}}" id="letter{{letterCount @index}}">{{{.}}}</span></div>
 		{{/each}}
 	</div>
 	<p class="f2-txt">

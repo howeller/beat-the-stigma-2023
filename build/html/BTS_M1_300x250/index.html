@@ -258,22 +258,21 @@
 		<span class="sr-only">MENTAL ILLNESS</span>
 		<div id="f2-container" class="full-size" aria-hidden="true">
 			<div id="f2-letter-line1" class="letter-line-container">
-				
-				<div class="letter-box"><span id="letter1">M</span></div>
-				<div class="letter-box"><span id="letter2">E</span></div>
-				<div class="letter-box"><span class="hide-letter" id="letter3">N</span></div>
-				<div class="letter-box"><span class="hide-letter" id="letter4">T</span></div>
-				<div class="letter-box"><span id="letter5">A</span></div>
-				<div class="letter-box"><span id="letter6">L</span></div>
+				<div class="letter-box"><span class="clue-letters" id="letter1">M</span></div>
+				<div class="letter-box"><span class="clue-letters" id="letter2">E</span></div>
+				<div class="letter-box"><span class="final-letters" id="letter3">N</span></div>
+				<div class="letter-box"><span class="final-letters" id="letter4">T</span></div>
+				<div class="letter-box"><span class="clue-letters" id="letter5">A</span></div>
+				<div class="letter-box"><span class="clue-letters" id="letter6">L</span></div>
 			</div>
 			<div id="f2-letter-line2" class="letter-line-container">
-				<div class="letter-box"><span id="letter7">I</span></div>
-				<div class="letter-box"><span class="hide-letter" id="letter8">L</span></div>
-				<div class="letter-box"><span id="letter9">L</span></div>
-				<div class="letter-box"><span id="letter10">N</span></div>
-				<div class="letter-box"><span class="hide-letter" id="letter11">E</span></div>
-				<div class="letter-box"><span id="letter12">S</span></div>
-				<div class="letter-box"><span id="letter13">S</span></div>
+				<div class="letter-box"><span class="clue-letters" id="letter7">I</span></div>
+				<div class="letter-box"><span class="final-letters" id="letter8">L</span></div>
+				<div class="letter-box"><span class="clue-letters" id="letter9">L</span></div>
+				<div class="letter-box"><span class="clue-letters" id="letter10">N</span></div>
+				<div class="letter-box"><span class="final-letters" id="letter11">E</span></div>
+				<div class="letter-box"><span class="clue-letters" id="letter12">S</span></div>
+				<div class="letter-box"><span class="clue-letters" id="letter13">S</span></div>
 			</div>
 			<p class="f2-txt">
 				In the US, more than 50% will be<br/>		diagnosed with this condition at some<br/>		point in their lifetime.	</h1>
@@ -327,11 +326,11 @@
 				_path.style.strokeDashoffset = pathLength;
 				_path.style.strokeWidth = strokeWidth;
 				_path.style.stroke = color;
-				cl('initSvgPath: '+_path.length+' strokeDasharray: '+_path.style.strokeDasharray+' strokeWidth: '+_path.style.strokeWidth);
+				// cl('initSvgPath: '+_path.length+' strokeDasharray: '+_path.style.strokeDasharray+' strokeWidth: '+_path.style.strokeWidth);
 			}
 			
 			function writeInSvgTl(_path, _speed){
-				cl("writeInSvgTl path: "+	gsap.getProperty(_path,"id")+" length: "+_path.length);
+				// cl("writeInSvgTl path: "+	gsap.getProperty(_path,"id")+" length: "+_path.length);
 				let _tl = gsap.timeline();
 				_tl.add('start')
 					.set(_path, { strokeDashoffset:_path.length },'start')
@@ -354,16 +353,16 @@
 					.from('#banner', { autoAlpha:0 },'start')
 					.from(['#beat','#the','#stigma'], { scale:0.5, transformOrigin:'50% 50%', alpha:0, stagger:0.3 })
 					.add('f2','+=1' )
-					.to('#bts-logo',{ scale: .38, /* x:2, */ y:-39, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
+					.to('#bts-logo',{ scale: .38, y:-39, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
 					.add(writeInSvgTl(_path, 1), 'f2')
-					.from('.letter-box', { scaleX:0, y:5, stagger:0.1, duration:0.2}, '-=0.6')
-					.from('.f2-txt', { alpha:0 })
-					.from('.hide-letter', {alpha:0, stagger:0.3},"+=1")
-					.add('end', '+=4')
+					.from('.letter-box', { scaleX:0, y:5, stagger:0.1, duration:0.2}, 'f2+=0.4')
+					.from('.f2-txt', { alpha:0 }, 'f2+=0.4')
+					.from('.clue-letters', {alpha:0, stagger:0.1},"+=1")
+					.from('.final-letters', {alpha:0, stagger:0.3},"+=1.6")
+					.add('end', '+=3')
 					.to('#bts-logo',{ y:-70, transformOrigin:'50% 0%', ease:'power3.out' }, 'end')
 					.to(['#outline','#f2-container'], {autoAlpha:0}, 'end')
-					.from('#end-txt', { alpha:0 })
-					.from(['#cta','#ohio-logo'], { alpha:0, stagger:0.3 },'+=1')
+					.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.3 })
 					.add(initReplayAction)
 					.from(replay.container, { autoAlpha: 0 })
 					// .seek('f2');
