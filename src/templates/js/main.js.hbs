@@ -1,0 +1,21 @@
+(function(window, document){
+	var tl, replay;
+
+	function clickOut() {window.open(window.clickTag);}
+	
+	{{>utilities.js}}
+
+	function init() {
+		id('clicker').addEventListener('click', clickOut, false);
+
+		tl = gsap.timeline({ defaults:{ duration:0.4 }});// GSAP 3.0!
+		initReplay();
+		animate();
+	}
+
+	{{> (bannerAnimateJs)}}
+	{{> replay.js}}
+	
+	window.addEventListener('load', init);
+
+})(this,document);

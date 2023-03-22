@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+:root {
+	--teal: #369ad8;
+	--dark-blue: #080133;
+}
+
+* {
+	font-family: 'Source Sans Pro', Arial sans-serif;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+	/* Adjust font size */
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;	
+	/* Font varient */
+	font-variant-ligatures: none;
+	-webkit-font-variant-ligatures: none;
+	/* Smoothing */
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+body, html {
+	background-color: #D4D4D4;
+	border: 0 none;
+	overflow: hidden;
+	outline: 0;
+	position: absolute;
+}
+
+button, button.abs {
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+}
+
+button:focus, button.abs:focus, .fake-button:focus {
+	outline: 5px solid #369ad8;
+}
+
+.border {
+	border: 1px solid black;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: absolute;
+	pointer-events: none
+}
+
+.hide { opacity: 0;}
+
+.full-size {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: {{width}}px;
+	height: {{height}}px;
+}
+
+#banner {
+	visibility: hidden;
+	position: relative;
+	overflow: hidden;
+	background-color: var(--dark-blue);
+	color: white;
+	font-weight: 600;
+}

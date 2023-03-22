@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Hogarth Preview">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../assets/style.css">
+		<script type='text/javascript' src='contentData.js'></script>
+		<script type='text/javascript' src='../../builder/contentBuilder.js'></script>
+		<script src="../../main.js"></script>
+		<script>document.title = main.specs.client + " - " + main.specs.campaign</script>
+    </head>
+
+    <body onload='loadedHandler()'>
+
+    	<div id="wrap">
+
+			<header>
+				<!-- HWW LOGO -->
+				<a href="../../"><div class="logo" width="150"><img src="../../assets/images/hww-logo.png" alt="Hogarth" width="100%"></div></a>
+			</header>
+
+
+			<div class="specs">
+
+				<!-- CLIENT LOGO -->
+				<div class="header"><span>Client: </span><img id="client-logo" src=""></div>
+				<!-- CAMPAIGN NAME-->
+				<div class="header"><div id="campaign"></div></div>
+			</div>
+
+			<div id="listing" class="sets"><!-- LIST OF BANNERS INSERTED HERE --></div>
+
+    	</div>
+
+			<script>
+				// CLIENT LOGO
+				document.getElementById("client-logo").src = "../../assets/images/" + main.specs.clientLogo;
+				// CAMPAIGN LOGO
+				document.getElementById("campaign").innerHTML = "<span>Description: </span>" + main.specs.campaign;
+				// CATEGORY
+//				document.getElementById("category").innerHTML = "<span>Language: </span>"+objData.categories;
+			</script>
+
+    </body>
+</html>

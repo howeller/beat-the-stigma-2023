@@ -1,0 +1,58 @@
+/*
+*	Utility / Helper Functions
+*/
+function cl(txt){console.log('%c '+txt,'background: rgba(51, 255, 0, 0.3); color: white;'); }
+function id(id){return document.getElementById(id); }
+{{!--function hide(element){element.style.visibility = 'hidden'; }
+function show(element){element.style.visibility = 'visible'; }
+function fadeIn(element){element.classList.add('show'); }
+function fadeOut(element){element.classList.remove('show'); }
+function fadeIn(element){element.style.opacity = 1; }
+function fadeOut(element){element.style.opacity = 0; }
+
+function isString(obj) {return typeof obj === 'string';}
+function toCss(num){return num.toString()+'px'; }
+function isObject(obj) {return obj !== null && typeof obj === 'object';}
+function isArraylike(obj){
+	return isObject(obj) && typeof obj.length === 'number' && obj.length > 0; // Returns false for empty arrays, which is fine for our purposes
+}
+function hasObjProp(obj) {
+	return isObject( obj ) && Object.keys(obj).length > 0 && Object.keys(obj)[0] !== null;// Checks to see if object has properties
+}
+function cssToNum(cssVal){return parseInt(cssVal, 10);}
+function getCSS(elem, prop){
+	// return gsap.getProperty(elem, prop);
+	return window.getComputedStyle(elem,null).getPropertyValue(prop);
+}
+function getCssNum(elem, prop){
+	// return gsap.getProperty(elem, prop);
+	var _val = window.getComputedStyle(elem,null).getPropertyValue(prop);
+	return parseInt(_val, 10);
+}
+function getPercentage(num1, num2){
+	// return Math.round((num1 / num2)*100) // whole number
+	 return Math.ceil((num1 / num2)*100)/100; // Decimal rounded to 100th
+}
+function removeSpaces(str){
+	return str.replace(/\s/g,''); 
+}
+function swapClasses(element, classToRemove, classToAdd ){
+	element.classList.remove(classToRemove);//String
+	element.classList.add(classToAdd);
+}
+function isNested(obj, key) {
+	return key.split(".").every(function(x) {
+			if(typeof obj != "object" || obj === null || ! x in obj)
+				return false;
+			obj = obj[x];
+			return true;
+	});
+}
+/*function isRetina(){
+	var mediaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\ (min--moz-device-pixel-ratio: 1.5),\ (-o-min-device-pixel-ratio: 3/2),\ (min-resolution: 1.5dppx)";
+	if (window.devicePixelRatio > 1)
+		return true;
+	if (window.matchMedia && window.matchMedia(mediaQuery).matches)
+		return true;
+	return false;
+}*/--}}

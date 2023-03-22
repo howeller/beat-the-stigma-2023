@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Hogarth Preview">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/style.css">
+        <script src="main.js"></script>
+        <script>console.log("PREVIEW PAGE VERSION: 29.03.2019");</script>
+    </head>
+    
+    <body>
+      	<div id="wrap">
+        	<header>
+        		<!-- HWW LOGO -->
+        		<div class="logo" width="150"><img src="assets/images/hww-logo.png" alt="Hogarth" width="100%"></div>
+        	</header>
+
+        	<div class="specs">
+            	<div class="header"><span>Client: </span><img id="client-logo" src=""></div>
+            	<div class="header"><span>Campaign: </span><div id="campaign"></div></div>
+        	</div>
+
+        	<div class="categories">
+            	<hr>
+            	<ul id="ul"><!-- LIST OF CATEGORIES INSERTED HERE --></ul>
+            	<hr>
+            	<br>
+        	</div>
+      	</div>
+     
+    	<script>
+	    	function createPageHeaders()
+	    	{
+	        	document.title = main.specs.client + " - " + main.specs.campaign;
+	        	document.getElementById("client-logo").src = "assets/images/" + main.specs.clientLogo;
+	        	document.getElementById("campaign").innerHTML = main.specs.campaign;
+    		}
+
+          	function createCategories()
+          	{
+	        	for ( var i = 0; i < main.categories.length; i ++ )
+	        	{
+	          		var title = main.categories[i].title;
+	          		var path = main.categories[i].path;
+
+	          		var liLink = document.createElement("a");
+	          			liLink.setAttribute( "href" , path );
+	          			liLink.setAttribute( "target" , "_self" );
+	          			liLink.innerHTML = title;
+
+	          		var li = document.createElement("li");
+	          			li.appendChild( liLink );
+
+	          		document.getElementById("ul").appendChild(li);
+	        	}
+	        }
+
+	        createPageHeaders();
+	        createCategories();
+    	</script>
+
+    </body>
+</html>

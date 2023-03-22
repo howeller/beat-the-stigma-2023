@@ -1,0 +1,78 @@
+#end-txt{
+	color: var(--teal);
+	font-weight: 700;
+	font-size: {{end.fontSize}}px;
+	line-height: 100%;
+	margin: {{end.marginTop}}px 0px 25px 16px;
+}
+
+/* Frame2 Quiz */
+
+div#f2-container h1{
+	color: var(--teal);
+	font-size: {{frame2.h1FontSize}}px;
+	line-height: 100%;
+	margin: {{frame2.h1MarginTop}}px 0px 9px 16px;
+}
+
+ol.f2-txt{
+	color: white;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 18px;
+	list-style-type: upper-alpha;
+	list-style-position: inside;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+/* F2 Individual lines */
+
+ol.f2-txt li {
+	display: list-item;
+	text-align: left;
+	padding: 2px 6px 3px;
+	margin: 2px 0px 0px 11px;
+}
+
+/* The highlighted line */
+
+li#answer{
+	background: linear-gradient(to right, var(--teal) 50%, rgba(0, 0, 0, 0.0) 50%);
+	background-size: {{frame2.answerBackgroundSize}};
+	background-position: {{frame2.answerBackgroundPosition}};
+	overflow: hidden;
+	border-radius: 3px;
+	width: -moz-fit-content;
+	width: fit-content;
+	list-style-position: inside;
+	margin-left: 12px;
+}
+
+span.strikethrough {
+	position: relative;
+	display: inline-block;
+}
+
+span.strikethrough::after {
+	position: absolute;
+	background-color: var(--teal);
+	content: ' ';
+	border-radius: 1px;
+	height: 3px;
+	left: 0;
+	top: 50%;
+}
+
+span.line1::after{
+	width: calc(100% + 30px);
+	margin: 0px -24px;
+}
+span.line-indent::after{
+	width: calc(100% + 1px);
+	margin: 0px 9px;
+}
+span.line-indent{
+	padding-left: 18px;
+}

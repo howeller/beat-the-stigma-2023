@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="HTML5 Preview Page Template">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type='text/javascript' src='pageBuilder.js'></script>
+    </head>
+
+    <body>
+
+        <div id="wrap">
+
+            <header><!-- HWW logo --></header>
+
+            <div class="specs">
+                <div class="header"><span>Client: </span><img id="client-logo" src=""></div>
+                <div class="header"><span>Campaign: </span><div id="campaign"></div></div>
+                <div class="header"><span>Creative: </span><div id="creative"></div></div>
+                <div class="header" id="deviceHolder"><span>Device mode: </span><div id="device"></div></div>
+                <div class="header" id="resizeHolder"><span>Resize: </span><div id="resize"></div></div>
+            </div>
+
+            <div class="page">
+                <div id="preview-holder" class="preview"></div>
+                <div id="link-holder"></div>
+            </div>
+
+        </div>
+
+        <script>
+            function addCSS( filename )
+            {
+                var style = document.createElement('link');
+                    style.href = pathToRoot+filename;
+                    style.type = 'text/css';
+                    style.rel = 'stylesheet';
+
+                var head = document.getElementsByTagName('head')[0];
+                    head.appendChild( style );
+            }
+
+            function addScript( filename , loadScript )
+            {
+                var script = document.createElement('script');
+                    script.src = pathToRoot+filename;
+                    script.type = 'text/javascript';
+
+                if ( loadScript && script.readyState ) // IE
+                {
+                    script.readystatechange = function()
+                    {
+                        if ( script.readyState === "loaded" || script.readyState === "complete" )
+                        {
+                            script.onreadystatechange = null;
+                            mainScriptLoaded(); 
+                        }
+                    }
+                } 
+                else if ( loadScript )
+                {
+                    script.onload = function()
+                    { 
+                        mainScriptLoaded(); 
+                    };
+                }
+
+                var head = document.getElementsByTagName('head')[0];
+                    head.appendChild( script );
+            }
+
+            function mainScriptLoaded()
+            {
+                document.getElementById("client-logo").src = pathToRoot+"preview/assets/images/"+main.specs.clientLogo;
+                document.getElementById("campaign").innerHTML = main.specs.campaign;
+            }
+
+            function setHeader()
+            {
+                var img = document.createElement('img');
+                    img.src = pathToRoot+"preview/assets/images/hww-logo.png";
+                    img.alt = "Hogarth";
+                    img.setAttribute( "width" , "100%" );
+
+                var div = document.createElement('div');
+                    div.setAttribute( "class" , "logo" );
+                    div.appendChild( img );
+
+                var a = document.createElement('a');
+                    a.setAttribute( "href" , pathToRoot );
+                    a.appendChild( div );
+
+                var headers = document.getElementsByTagName('header');
+                    headers[0].appendChild( a );
+            }
+
+            addCSS( "preview/assets/style.css" );
+            addScript( "preview/main.js" , true );
+            setHeader();
+        </script>
+
+    </body>
+</html>

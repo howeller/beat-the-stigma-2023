@@ -1,0 +1,82 @@
+/* All frame2 text */
+
+div#f2-container h1{
+	color: var(--teal);
+	font-size: 29px;
+	line-height: 90%;
+	margin: {{frame2.marginTop}}px {{frame2.marginLeft}}px 10px;
+}
+
+div#f2-container h1 span{
+	display: block;
+}
+
+ol.f2-txt{
+	color: white;
+	font-weight: 600;
+	font-size: 23px;
+	line-height: 25px;
+	list-style-type: upper-alpha;
+	list-style-position: inside; {{!"outside" gives weird spacing in Safari}}
+	padding: 0;
+	margin: 0;
+	width:100%;
+}
+
+/* F2 Individual lines */
+
+ol.f2-txt li {
+	display: list-item;
+	text-align: left;
+	padding: 0;
+	margin-left: 41px;
+}
+
+/* The highlighted line */
+
+li#answer{
+	background: linear-gradient(to right, var(--teal) 49.9%, rgba(0, 0, 0, 0.0) 49.9%);
+	background-size: 200% 100%;
+	background-position:right bottom;
+	overflow: hidden;
+	border-radius: 2px;
+	width: -moz-fit-content;
+	width: fit-content;
+	list-style-position: inside;
+	padding: 1px 8px 4px;
+	margin-left: 33px;
+}
+
+span.strikethrough {
+	position: relative;
+	display: inline-block;
+}
+
+span.strikethrough::after {
+	position: absolute;
+	background-color: var(--teal);
+	content: ' ';
+	border-radius: 1px;
+	height: 3px;
+	left: 0;
+	top: 50%;
+}
+
+span.line1::after{
+	width: calc(100% + 50px);
+	margin: 0px -40px;
+}
+span.line-indent::after{
+	width: calc(100% + 1px);
+	margin: 0px 10px;
+}
+span.line-indent{
+	padding-left: 24px;
+}
+
+/*{{!-- 
+		WRAP THE TXT INSIDE A IF YOU NEED TO CONTROL THE SPACE BETWEEN MARKER AND TXT
+
+li span{ margin-left: -5px; }
+
+li#answer span{ display: inline-block; }--}}*/

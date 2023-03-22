@@ -1,0 +1,34 @@
+function animate() {
+	// cl('{{name}}');
+	var clipClosed = 'polygon(-1% 0%, 0% 0%, 0% 100%, -1% 100%)',
+		clipOpen = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)';
+
+	tl
+		.add('start')
+		.from('#banner', { autoAlpha:0 },'start')
+		.from(['#beat','#the','#stigma'], { scale:0.5, transformOrigin:'50% 50%', alpha:0, stagger:0.3 })
+		.add('f2','+=1.5' )
+		.to('#bts-logo',{ scale: .38, y: -39, transformOrigin:'50% 0%', duration:1 }, 'f2')
+		// .from('#f2-container h1', { alpha:0, x:'-=50'})
+		// .from('#f2-t1 li', {x:'-=30', alpha:0, stagger: 0.5}, '+=1')
+		// .to('#answer', {backgroundPosition: '0% 100%'}, '+=2')
+		// .to(['#f2-container h1','#f2-t1 li'],{alpha:0, x:'+=30', stagger: 0.1},'+=2')
+		// .to('#answer',{alpha:0, x:'+=30', stagger: 0.1},'-=0.4')
+		.from('.f2-txt', { alpha:0 },'+=4')
+		.add('end')
+		.from('#end-txt', { alpha:0, x:'-=50'}, 'end')
+		.from('#cta', { alpha:0 },'+=1')
+		.from('#ohio-logo',{ alpha:0 })
+		.add(initReplayAction)
+		.from(replay.container, { autoAlpha: 0 })
+		// .seek('f2');
+		// .seek('end');
+		;
+		{{#if_eq (showFpo) '1'}}tl.pause('1.5');{{/if_eq}}
+		{{#if_eq (showFpo) '2'}}tl.pause('4');{{/if_eq}}
+		{{#if_eq (showFpo) '3'}}tl.pause('8');{{/if_eq}}
+		{{#if_eq (showFpo) '4'}}tl.pause('15');{{/if_eq}}
+		// tl.pause('1.5');
+		// tl.pause('4.5');
+		console.log('Animation Runtime is ' + tl.endTime());
+}

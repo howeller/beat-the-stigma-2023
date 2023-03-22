@@ -1,0 +1,44 @@
+/* Frame2 Quiz */
+
+div#f2-container h1{
+	color: var(--teal);
+	font-size: 26px;
+	line-height: 90%;
+	text-align: center;
+	margin: 15px 0;
+	width: 100%;
+}
+
+ol.f2-txt{
+	color: white;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 18px;
+	list-style-type: upper-alpha;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+/* F2 Individual lines */
+
+ol.f2-txt li {
+	display: list-item;
+	list-style-position: inside;
+	padding: 1px 4px;
+	margin: 0px 10px;
+}
+
+/* The highlighted lines */
+
+li.highlight-txt{
+	background: linear-gradient(to right, var(--teal) 49.9%, rgba(0, 0, 0, 0.0) 49.9%);
+	background-size: 200% 100%;
+	background-position:right bottom;
+	overflow: hidden;
+	border-radius: 2px;
+	width: -moz-fit-content;
+	width: fit-content;
+}

@@ -1,0 +1,37 @@
+/*
+*	Replay Button actions :: replay.js v.2.1
+*/
+
+function initReplay(){
+	replay = {
+		container: id('replay-container'),
+		svg: id('replaySvg'),
+		on: false,
+		tween: {spinSpeed:0.6, speed:0.3, tweenFrom:{autoAlpha:0}, delay:0}
+	}
+}
+
+function initReplayAction(){
+	cl('initReplayAction');
+	replay.container.addEventListener('click', onReplayClick, false);
+	replay.container.addEventListener('mouseenter', onReplayOver);
+	replay.container.addEventListener('mouseleave', onReplayOut);
+}
+
+function onReplayClick() { 
+	tl.restart();
+	replay.container.blur();
+}
+
+function onReplayOver() {
+	if (replay.on) return;
+	replay.on = true;
+	gsap.to(replay.svg, { duration:replay.tween.spinSpeed, rotate: '+=360_cw', repeat: -1, transformOrigin: 'center center', ease:'none' });
+}
+function onReplayOut() {
+	replay.on = false;
+	var _r = gsap.getProperty(replay.svg, 'rotate'),
+		_newR = (_r < 360) ? 360 : '+=' + (720 - _r).toString();
+
+	gsap.to(replay.svg, { duration:replay.tween.spinSpeed, rotate: _newR, transformOrigin: 'center center', overwrite:true, ease: 'Power1.out', onComplete: function() { gsap.set(replay.svg, { rotation: 0 }); } });
+}

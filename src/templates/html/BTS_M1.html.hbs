@@ -1,0 +1,38 @@
+
+<span class="sr-only">{{group.frame2.txt}}</span>
+<div id="f2-container" class="full-size" aria-hidden="true">
+	<div id="f2-letter-line1" class="letter-line-container">
+		{{#each each.group.frame2.line1}}
+		<span>{{{.}}}</span>
+		{{/each}}
+	</div>
+	<div id="f2-letter-line2" class="letter-line-container">
+		{{#each each.group.frame2.line2}}
+		<div class="letter-box"><span>{{{.}}}</span></div>
+		{{/each}}
+	</div>
+	<p class="f2-txt">
+		{{#each frame2.p}}
+		{{{.}}}
+		{{~#unless @last}}<br/>{{/unless}}
+		{{~/each}}
+	</h1>
+</div>
+
+<div id="end-container" class="full-size">
+	<p id="end-txt">{{#each end.txt}}
+		{{{.}}}{{#unless @last}}<br/>{{/unless}}{{/each}}
+	</p>
+	<button id="cta" tabindex="0" aria-label="{{global.cta.txt}}">{{!<div id="cta" class="fake-button cta-txt" role="button" tabindex="0">}}
+		<span id="cta-txt">{{global.cta.txt}}</span>
+	</button>
+	{{> ohio_logo.svg}}
+</div>
+{{!--
+
+
+<ol type="A" id="f2-t1" class="f2-txt">{{#each frame2.list}}
+	{{#unless @last}}<li>{{{.}}}</li>{{else}}<li id="answer" class="highlight-txt">{{{.}}}</li>{{/unless}}{{/each}}
+</ol>
+<span class="sr-only">The answer is D. {{frame2.list.[3]}}</span> 
+--}}

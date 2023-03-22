@@ -1,0 +1,80 @@
+#end-txt{
+	color: var(--teal);
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 100%;
+	margin: {{end.margin}};
+}
+
+/* Frame2 Quiz */
+
+div#f2-container h1{
+	color: var(--teal);
+	font-size: 42px;
+	line-height: 100%;
+	margin: {{frame2.h1Margin}};
+}
+
+ol.f2-txt{
+	color: white;
+	font-weight: 600;
+	font-size: {{frame2.listFontSize}}px;
+	line-height: {{frame2.listLineHeight}}px;
+	list-style-type: upper-alpha;
+	list-style-position: inside;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+/* F2 Individual lines */
+
+ol.f2-txt li {
+	display: list-item;
+	text-align: left;
+	padding: 2px 8px 3px;
+	margin: {{frame2.listMargin}};
+}
+
+/* The highlighted line */
+
+li#answer{
+	background: linear-gradient(to right, var(--teal) 49.9%, rgba(0, 0, 0, 0.0) 49.9%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	overflow: hidden;
+	border-radius: 3px;
+	width: -moz-fit-content;
+	width: fit-content;
+	list-style-position: inside;
+	margin-left: {{frame2.answerMarginLeft}}px;
+}
+
+span.strikethrough {
+	position: relative;
+	display: inline-block;
+}
+
+span.strikethrough::after {
+	position: absolute;
+	background-color: var(--teal);
+	content: ' ';
+	border-radius: 1px;
+	height: 3px;
+	left: 0;
+	top: 50%;
+}
+
+span.line1::after{
+	width: {{frame2.strikeWidth}};
+	margin: {{frame2.strikeMargin}};
+}
+span.line-indent::after{
+	width: calc(100% - 5px);
+	margin: 0px 16px;
+}
+span.line-indent {
+	padding-left: 28px;
+	top: -2px;
+	position: relative; /* margin with negative values doesn't work on inline elements. */
+}
