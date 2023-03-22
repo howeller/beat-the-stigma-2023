@@ -84,6 +84,9 @@ function build(version, copyImages=false, showFpoNum=''){
 				getFpoName: function(){ return `FPO${showFpoNum}.png`;},	
 				showFpo: function(){ return showFpoNum; },
 				isLeader: function(){ return this.width >= 728 },
+				letterCount: function(index){ return parseInt(index) + 7 }, // Returns int for line2 of letters
+				// isHiddenLetter: function(){	return this.group.hiddenLetters.includes(index+1); },
+				isHiddenLetter: function(scope, lineNum, index, options){ return _isHiddenLetter(scope.group.frame2.hiddenLetters, lineNum, index, options) },
 				// getTxtWidth : function(scope, index, options){ return imgHelper.getImgWidth(scope.imgPath, `t${index+1}_2x.png`, options)},
 				// getImgWidth : function(file, options){ return imgHelper.getImgWidth(this.imgPath, file, options)},
 				// getImgSize : function(file, options){ return imgHelper.getImgSize(this.imgPath, file, options)},
@@ -115,6 +118,19 @@ function build(version, copyImages=false, showFpoNum=''){
 	});
 	let lastStream = task[task.length-1];
 	return lastStream;
+}
+
+function _isHiddenLetter(array, lineNum, index, options){
+
+	// console.log('_isHiddenLetter? '+array);
+	let letNum = (lineNum==='line2' ? 7 : 1); // Add 1 for line1 or 7 for line2
+	index += letNum;
+
+	if (array.includes(index)){
+		return options.fn(this);
+	}else{
+		return options.inverse(this);
+	}
 }
 
 // Copy Backup JPGs to build

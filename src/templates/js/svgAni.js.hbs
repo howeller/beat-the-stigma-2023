@@ -1,0 +1,22 @@
+// Init and set the width of the SVG path stroke. Needs to be fat enough to fill SVG shape
+
+function initSvgPath( _path, _strokeWidth, _color){
+	let pathLength = Math.ceil(_path.getTotalLength())+1,
+		color = _color||'#369ad8',
+		strokeWidth = _strokeWidth || 1.0;
+	_path.length = pathLength; // Save for future use
+	_path.style.strokeDasharray = pathLength;
+	_path.style.strokeDashoffset = pathLength;
+	_path.style.strokeWidth = strokeWidth;
+	_path.style.stroke = color;
+	cl('initSvgPath: '+_path.length+' strokeDasharray: '+_path.style.strokeDasharray+' strokeWidth: '+_path.style.strokeWidth);
+}
+
+function writeInSvgTl(_path, _speed){
+	cl("writeInSvgTl path: "+	gsap.getProperty(_path,"id")+" length: "+_path.length);
+	let _tl = gsap.timeline();
+	_tl.add('start')
+		.set(_path, { strokeDashoffset:_path.length },'start')
+		.to(_path, { strokeDashoffset:0, duration:_speed})
+	return _tl;
+}
