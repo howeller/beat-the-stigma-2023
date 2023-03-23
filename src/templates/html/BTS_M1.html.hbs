@@ -4,15 +4,15 @@
 <div id="f2-container" class="full-size" aria-hidden="true">
 	<div id="f2-letter-line1" class="letter-line-container">
 		{{#each group.frame2.line1}}
-		<div class="letter-box"><span class="{{getLetterClass .. (int @index)}}" id="letter{{int @index}}">{{{.}}}</span></div>
+		<div class="letter-box"><span class="{{getLetterClass .. (int @index)}}" {{!--id="letter{{int @index}}--}}">{{{.}}}</span></div>
 		{{/each}}
 	</div>
 	<div id="f2-letter-line2" class="letter-line-container">
 		{{#each group.frame2.line2 }}
-		<div class="letter-box"><span class="{{getLetterClass .. (letterCount @index)}}" id="letter{{letterCount @index}}">{{{.}}}</span></div>
+		<div class="letter-box"><span class="{{getLetterClass .. (letterCount @index)}}" {{!--id="letter{{letterCount @index}}--}}">{{{.}}}</span></div>
 		{{/each}}
 	</div>
-	<p class="f2-txt">
+	<p id="f2-txt">
 		{{#each frame2.p}}
 		{{{.}}}
 		{{~#unless @last}}<br/>{{/unless}}

@@ -1,6 +1,6 @@
 /* Frame2 */
 
-div.letter-line-container, p.f2-txt {
+div.letter-line-container {
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -8,7 +8,7 @@ div.letter-line-container, p.f2-txt {
 #f2-letter-line1 {
 	margin-top: 94px;
 }
-#f2-letter-line2, p.f2-txt {
+#f2-letter-line2, p#f2-txt {
 	margin-top: 5px;
 }
 
@@ -28,9 +28,10 @@ div.letter-box {
 	font-size: 19px;
 }
 
-p.f2-txt {
+p#f2-txt {
 	font-size: 11px;
 	line-height: 1.1;
+	{{#if (showFpo)}}color: red;{{/if}}
 }
 
 svg#outline {
@@ -49,7 +50,7 @@ svg#outline {
 #end-txt{
 	font-size: 17px;
 	margin-top: 96px;
-	/* color: red; */
+	{{#if (showFpo)}}color: red;{{/if}}
 }
 
 /* CTA Btn */

@@ -17,21 +17,21 @@ function animate() {
 		.add('f2','+=1' )
 		.to('#bts-logo',{ scale: .38, y:-39, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
 		.add(writeInSvgTl(_path, 1), 'f2')
-		.from('.letter-box', { scaleX:0, y:5, stagger:0.1, duration:0.2}, 'f2+=0.4')
-		.from('.f2-txt', { alpha:0 }, 'f2+=0.4')
-		.from('.clue-letters', {alpha:0, stagger:0.1},"+=1")
-		.from('.final-letters', {alpha:0, stagger:0.3},"+=1.6")
+		.from('#f2-txt', { alpha:0 }, 'f2+=0.4')
+		.from('.letter-box', { scaleX:0, y:10, stagger:0.05, duration:0.2}, '+=1')
+		// .from('.init-letters', {alpha:0, stagger:0.1},"+=0.4")
+		.from('.missing-letters', {alpha:0, stagger:0.2},"+=3")
 		.add('end', '+=3')
 		.to('#bts-logo',{ y:-70, transformOrigin:'50% 0%', ease:'power3.out' }, 'end')
 		.to(['#outline','#f2-container'], {autoAlpha:0}, 'end')
-		.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.3 })
+		.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.5 })
 		.add(initReplayAction)
 		.from(replay.container, { autoAlpha: 0 })
 		// .seek('f2');
 		// .seek('end');
 		;
 		{{#if_eq (showFpo) '1'}}tl.pause('1.5');{{/if_eq}}
-		{{#if_eq (showFpo) '2'}}tl.pause('4');{{/if_eq}}
+		{{#if_eq (showFpo) '2'}}tl.pause('2.9');{{/if_eq}}
 		{{#if_eq (showFpo) '3'}}tl.pause('6');{{/if_eq}}
 		{{#if_eq (showFpo) '4'}}tl.pause('15');{{/if_eq}}
 		// tl.pause('1.5');

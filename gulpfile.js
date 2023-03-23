@@ -76,8 +76,6 @@ function build(version, copyImages=false, showFpoNum=''){
 				bannerCss: function(){ return this.cssToUse ? this.cssToUse : `${this.name}.css` ? `${this.name}.css` : false },
 				bannerAnimateJs: function(){ return this.jsToUse ? this.jsToUse : `${this.name}.js`},
 				cssToUse	: function(){ return this.cssToUse ? this.cssToUse : `${this.name}.css`; },
-				// cssCheck : function(){ return util.fileCheck(`${dir.css}${this.name}.css.hbs`)},
-				// cssCheck : function(){ return util.fileCheck(`${dir.srcBanners}${this.name}/${this.name}.css.hbs`)},
 				sharedCss: function(){ return `${this.width}x${this.height}.css` },
 				getHtml : function(){ return this.html ? this.html : "default.html" },
 				getName : function(arg){ return arg},
@@ -85,7 +83,7 @@ function build(version, copyImages=false, showFpoNum=''){
 				showFpo: function(){ return showFpoNum; },
 				isLeader: function(){ return this.width >= 728 },
 				letterCount: function(index){ return parseInt(index) + 7 }, // Returns int for line2 of letters
-				getLetterClass: function(scope, index){ return scope.group.frame2.hiddenLetters.includes(index) ? 'final-letters': 'clue-letters'; },
+				getLetterClass: function(scope, index){ return scope.group.frame2.hiddenLetters.includes(index) ? 'missing-letters': 'init-letters'; },
 				if_eq: helper.if_eq,
 				int: helper.int,
 				times: helper.times

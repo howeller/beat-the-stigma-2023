@@ -159,7 +159,7 @@
 		}
 		/* Frame2 */
 		
-		div.letter-line-container, p.f2-txt {
+		div.letter-line-container {
 			display: flex;
 			justify-content: center;
 			width: 100%;
@@ -167,7 +167,7 @@
 		#f2-letter-line1 {
 			margin-top: 94px;
 		}
-		#f2-letter-line2, p.f2-txt {
+		#f2-letter-line2, p#f2-txt {
 			margin-top: 5px;
 		}
 		
@@ -187,9 +187,10 @@
 			font-size: 19px;
 		}
 		
-		p.f2-txt {
+		p#f2-txt {
 			font-size: 11px;
 			line-height: 1.1;
+			
 		}
 		
 		svg#outline {
@@ -208,7 +209,7 @@
 		#end-txt{
 			font-size: 17px;
 			margin-top: 96px;
-			/* color: red; */
+			
 		}
 		
 		/* CTA Btn */
@@ -258,23 +259,23 @@
 		<span class="sr-only">MENTAL ILLNESS</span>
 		<div id="f2-container" class="full-size" aria-hidden="true">
 			<div id="f2-letter-line1" class="letter-line-container">
-				<div class="letter-box"><span class="clue-letters" id="letter1">M</span></div>
-				<div class="letter-box"><span class="clue-letters" id="letter2">E</span></div>
-				<div class="letter-box"><span class="final-letters" id="letter3">N</span></div>
-				<div class="letter-box"><span class="final-letters" id="letter4">T</span></div>
-				<div class="letter-box"><span class="clue-letters" id="letter5">A</span></div>
-				<div class="letter-box"><span class="clue-letters" id="letter6">L</span></div>
+				<div class="letter-box"><span class="init-letters" ">M</span></div>
+				<div class="letter-box"><span class="init-letters" ">E</span></div>
+				<div class="letter-box"><span class="missing-letters" ">N</span></div>
+				<div class="letter-box"><span class="missing-letters" ">T</span></div>
+				<div class="letter-box"><span class="init-letters" ">A</span></div>
+				<div class="letter-box"><span class="init-letters" ">L</span></div>
 			</div>
 			<div id="f2-letter-line2" class="letter-line-container">
-				<div class="letter-box"><span class="clue-letters" id="letter7">I</span></div>
-				<div class="letter-box"><span class="final-letters" id="letter8">L</span></div>
-				<div class="letter-box"><span class="clue-letters" id="letter9">L</span></div>
-				<div class="letter-box"><span class="clue-letters" id="letter10">N</span></div>
-				<div class="letter-box"><span class="final-letters" id="letter11">E</span></div>
-				<div class="letter-box"><span class="clue-letters" id="letter12">S</span></div>
-				<div class="letter-box"><span class="clue-letters" id="letter13">S</span></div>
+				<div class="letter-box"><span class="init-letters" ">I</span></div>
+				<div class="letter-box"><span class="missing-letters" ">L</span></div>
+				<div class="letter-box"><span class="init-letters" ">L</span></div>
+				<div class="letter-box"><span class="missing-letters" ">N</span></div>
+				<div class="letter-box"><span class="init-letters" ">E</span></div>
+				<div class="letter-box"><span class="init-letters" ">S</span></div>
+				<div class="letter-box"><span class="init-letters" ">S</span></div>
 			</div>
-			<p class="f2-txt">
+			<p id="f2-txt">
 				In the US, more than 50% will be<br/>		diagnosed with this condition at some<br/>		point in their lifetime.	</h1>
 		</div>
 		
@@ -355,14 +356,14 @@
 					.add('f2','+=1' )
 					.to('#bts-logo',{ scale: .38, y:-39, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
 					.add(writeInSvgTl(_path, 1), 'f2')
-					.from('.letter-box', { scaleX:0, y:5, stagger:0.1, duration:0.2}, 'f2+=0.4')
-					.from('.f2-txt', { alpha:0 }, 'f2+=0.4')
-					.from('.clue-letters', {alpha:0, stagger:0.1},"+=1")
-					.from('.final-letters', {alpha:0, stagger:0.3},"+=1.6")
+					.from('#f2-txt', { alpha:0 }, 'f2+=0.4')
+					.from('.letter-box', { scaleX:0, y:10, stagger:0.05, duration:0.2}, '+=1')
+					// .from('.init-letters', {alpha:0, stagger:0.1},"+=0.4")
+					.from('.missing-letters', {alpha:0, stagger:0.2},"+=3")
 					.add('end', '+=3')
 					.to('#bts-logo',{ y:-70, transformOrigin:'50% 0%', ease:'power3.out' }, 'end')
 					.to(['#outline','#f2-container'], {autoAlpha:0}, 'end')
-					.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.3 })
+					.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.5 })
 					.add(initReplayAction)
 					.from(replay.container, { autoAlpha: 0 })
 					// .seek('f2');
