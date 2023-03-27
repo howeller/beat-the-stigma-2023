@@ -9,12 +9,12 @@ var QueryString = function ()
     var query_string = {};
     var query = window.location.search.substring(1);
     var vars = query.split("&");
-    console.log(vars);
+    // console.log(vars);
 
     for ( var i=0 ; i<vars.length; i++ )
     {
         var pair = vars[i].split("=");
-        console.log("QUERY ["+ pair[0] +" : "+ pair[1] +"]");
+        // console.log("QUERY ["+ pair[0] +" : "+ pair[1] +"]");
 
         // If first entry with this name
         if ( typeof query_string[ pair[0] ] === "undefined" )
@@ -71,12 +71,6 @@ function checkBannerType()
             addSizesDropDown( QueryString.sizesArray );
             break;
 
-        case "gif":
-            setAssetName( QueryString.assetname );
-            createBannerGIF( QueryString );
-            addDownloadLink( QueryString.src , QueryString.type );
-            break;
-
         case "mp4":
             setAssetName( QueryString.assetname );
             createBannerVideo( QueryString );
@@ -85,7 +79,7 @@ function checkBannerType()
 
         default:
             setAssetName( QueryString.assetname );
-            createBannerStatic( QueryString );
+            createBannerStatic( QueryString, "."+QueryString.type );
             addDownloadLink( QueryString.src , QueryString.type );
     }
 }
@@ -93,9 +87,13 @@ function checkBannerType()
 // ADD BACKUP IMAGE NEXT TO HTML
 function checkForBackUp()
 {
-    if ( QueryString.backup && QueryString.backup != "undefined" && QueryString.backup != "false" )
+    if ( QueryString.backup != "undefined" && QueryString.backup != "false" )
     {
-        createBannerStatic( QueryString );
+        var isCustomBackupType = QueryString.backup !== 'true',// Check if custom file ext is passed for HTML backup
+            fileType = isCustomBackupType ? QueryString.backup : "jpg"
+            fileNameSuffix = "-backup."+fileType;
+
+        createBannerStatic( QueryString, fileNameSuffix );
     }
 }
 
@@ -104,26 +102,8 @@ function setAssetName( assetName )
     id("creative").innerHTML = QueryString.displayName;
 }
 
-function createBannerStatic( data )
+function createBannerStatic( data, fileNameSuffix )
 {
-    var isCustomBackupType = (QueryString.type === "html5" && QueryString.backup !== 'true'),// Check if custom file ext is passed
-        fileNameSuffix = (QueryString.type == "jpg" ) ? ".jpg" : isCustomBackupType ? "." + QueryString.backup : "-backup.jpg";
-
-    var i = document.createElement("img");
-        i.setAttribute( "src" , pathToRoot+data.src + fileNameSuffix );
-        i.setAttribute( "width" , data.w+"px" );
-        i.setAttribute( "height" , data.h+"px" );
-        i.setAttribute( "alt" , "" );
-        i.style.border = "none";
-        i.style.marginBottom = "10px";
-        i.style.verticalAlign = "top";
-
-    id("preview-holder").appendChild(i);
-}
-
-function createBannerGIF( data )
-{
-    var fileNameSuffix = ( QueryString.type == "gif" ) ? ".gif" : ".gif";
     var i = document.createElement("img");
         i.setAttribute( "src" , pathToRoot+data.src + fileNameSuffix );
         i.setAttribute( "width" , data.w+"px" );
