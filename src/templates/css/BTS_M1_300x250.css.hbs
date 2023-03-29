@@ -15,7 +15,6 @@ div.letter-line-container {
 /* F2 Individual letters */
 div.letter-box {
 	background-color: var(--teal);
-	/* background-color: rgba(255, 0, 0, 0.2); */
 	border-radius: 2px;
 	display: inline-flex;
 	justify-content: center;
@@ -24,8 +23,8 @@ div.letter-box {
 	width: 17px;
 	height: 22px;
 	margin: 0 3px;
-	/* padding: 2px; */
 	font-size: 19px;
+	{{#if (showFpo)}}background-color: rgba(255, 0, 0, 0.4); color:black !important;{{/if}}
 }
 
 p#f2-txt {
@@ -57,19 +56,19 @@ svg#outline {
 
 #cta {
 	background-color: var(--teal);
-	/* background-color: rgba(255, 0, 0, 0.4); */
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 20px auto 0;
 	padding: 5px 7px;
+	font-size: 15px;
+	letter-spacing: -0.5px;	
+	{{#if (showFpo)}}background-color: rgba(255, 0, 0, 0.4); color:red{{/if}}
 }
 
 #cta-txt {
-	font-size: 15px;
-	/* line-height: 22px; */
-	letter-spacing: -0.5px;
+
 	white-space: nowrap;
 	width: auto;
 }
@@ -78,10 +77,3 @@ svg#ohio-logo{
 	width: 28px;
 	margin: 20px auto;
 }
-
-
-
-
-
-
-
