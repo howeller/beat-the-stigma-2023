@@ -1,49 +1,91 @@
+/* Frame2 */
+
+div.letter-line-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+#f2-letter-line1 {
+	margin-top: 202px;
+}
+#f2-letter-line2 {
+	margin-top: 12px;
+}
+
+/* F2 Individual letters */
+div.letter-box {
+	background-color: var(--teal);
+	/* background-color: rgba(255, 0, 0, 0.2); */
+	border-radius: 2px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 24px;
+	height: 34px;
+	margin: 0 6px;
+	/* padding: 2px; */
+	font-size: 30px;
+	{{#if (showFpo)}}background-color: rgba(255, 0, 0, 0.4);{{/if}}
+}
+
+p#f2-txt {
+	font-size: 18px;
+	line-height: 1.1;
+	margin-top: 40px;
+	{{#if (showFpo)}}color: red;{{/if}}
+}
+
+svg#outline {
+	top: 143px;
+	left: 19px;
+	width: 260px;
+	object-fit: contain;
+	/* margin: 143px auto; */
+}
+
+/* Endframe */
+
+#end-container * {
+	position: relative !important;
+	display: block;
+}
+
 #end-txt{
-	color: var(--teal);
-	font-weight: 700;
-	font-size: 42px;
-	line-height: 100%;
-	margin: 142px 0px 32px 28px;
+	font-size: 29px;
+	line-height: 30px;
+	margin-top: 196px;
+	{{#if (showFpo)}}color: red;{{/if}}
 }
 
-/* Frame2 Quiz */
+/* CTA Btn */
 
-div#f2-container h1{
-	color: var(--teal);
-	font-size: 42px;
-	line-height: 100%;
-	margin: 114px 0px 12px 28px;
+#cta {
+	background-color: var(--teal);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 31px auto 0;
+	padding: 8px 12px;
+	font-size: 16px;
+	letter-spacing: -0.5px;
+	{{#if (showFpo)}}background-color: rgba(255, 0, 0, 0.4); color:red;{{/if}}
+}
+#cta-txt {
+
+	white-space: nowrap;
+	width: auto;
 }
 
-ol.f2-txt{
-	color: white;
-	font-weight: 600;
-	font-size: 25px;
-	line-height: 28px;
+svg#ohio-logo{
+	width: 52px;
+	margin: 146px auto 0;
 }
 
-/* F2 Individual lines */
 
-ol.f2-txt li {
-	display: list-item;
-	list-style-position: inside;
-	padding: 2px 8px;
-	margin: 2px 0px 0px 22px;
-}
 
-/* The highlighted lines */
 
-li.highlight-txt{
-	background: linear-gradient(to right, var(--teal) 49.9%, rgba(0, 0, 0, 0.0) 49.9%);
-	background-size: 200% 100%;
-	background-position: right bottom;
-	overflow: hidden;
-	border-radius: 3px;
-	width: -moz-fit-content;
-	width: fit-content;
-}
 
-span.line-indent{
-	padding-left: 28px;
-	margin-top: -2px;
-}
+
+

@@ -78,8 +78,9 @@ function build(version, copyImages=false, showFpoNum=''){
 				cssToUse	: function(){ return this.cssToUse ? this.cssToUse : `${this.name}.css`; },
 				sharedCss: function(){ return `${this.width}x${this.height}.css` },
 				getHtml : function(){ return this.html ? this.html : "default.html" },
+				getOutlineSvg : function(){ return this.outlineSvg ? this.outlineSvg : "outline_M1_300x250.svg" },
 				getName : function(arg){ return arg},
-				getFpoName: function(){ return `FPO${showFpoNum}.png`;},	
+				getFpoName: function(){ return `FPO${showFpoNum}.jpg`;},	
 				showFpo: function(){ return showFpoNum; },
 				isLeader: function(){ return this.width >= 728 },
 				letterCount: function(index){ return parseInt(index) + 7 }, // Returns int for line2 of letters
