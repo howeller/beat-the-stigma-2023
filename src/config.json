@@ -15,6 +15,23 @@
 					"hiddenLetters": [3,4,8,10]
 				}
 			},
+			"BTS_M1_160x600": {
+				"html": "BTS_M1.html",
+				"approved": false,
+				"backup": false,
+        "name": "BTS_M1_160x600",
+				"jsToUse": "BTS_M1_Skyscraper.js",
+				"outlineSvg": "outline_M1_160x600.svg",
+				"frame2":{
+					"logo":{ "x": -55, "y":-136, "scale":0.61},
+					"p": ["In the US, more than", "50% will be diagnosed", " with this condition", "at some point", "in their lifetime."]
+				},
+				"end": {
+					"logo":{ "x": -57, "y":-248, "scale":0.76},
+					"txt": ["Ohio,", "challenge what", "you know about", "mental health."]
+				},
+				"width": 160, "height": 600
+			},
 			"BTS_M1_300x250": {
 				"html": "BTS_M1.html",
 				"approved": false,
@@ -47,25 +64,6 @@
 			}
 		}
 	},
-			"BTS_M1_160x600": {
-				"html": "BTS_M1.html",
-				"approved": false,
-				"backup": false,
-        "name": "BTS_M1_160x600",
-				"jsToUse": "BTS_M1_Skyscraper.js",
-				"frame2":{
-					"h1": ["ADDICTION","IS OFTEN","THE RESULT","OF WHAT:"],
-					"list":[
-						"Genetics",
-						"Traumatic <span class=\"line-indent\">experiences</span>",
-						"Mental illness",
-						"All of the above"]
-				},
-				"end": {
-					"txt": ["CHALLENGE","WHAT YOU","KNOW","ABOUT","ADDICTION."]
-				},
-				"width": 160, "height": 600
-			},
 			"BTS_M1_728x90": {
 				"html": "BTS_M1.html",
 				"approved": false,
