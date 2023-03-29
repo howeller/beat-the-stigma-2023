@@ -175,7 +175,6 @@
 		/* F2 Individual letters */
 		div.letter-box {
 			background-color: var(--teal);
-			/* background-color: rgba(255, 0, 0, 0.2); */
 			border-radius: 2px;
 			display: inline-flex;
 			justify-content: center;
@@ -184,7 +183,6 @@
 			width: 24px;
 			height: 34px;
 			margin: 0 6px;
-			/* padding: 2px; */
 			font-size: 30px;
 			
 		}
@@ -201,7 +199,6 @@
 			left: 19px;
 			width: 260px;
 			object-fit: contain;
-			/* margin: 143px auto; */
 		}
 		
 		/* Endframe */
@@ -242,13 +239,6 @@
 			width: 52px;
 			margin: 146px auto 0;
 		}
-		
-		
-		
-		
-		
-		
-		
 	</style>
 </head>
 
@@ -360,7 +350,7 @@
 					.from('#banner', { autoAlpha:0 },'start')
 					.from(['#beat','#the','#stigma'], { scale:0.5, transformOrigin:'50% 50%', alpha:0, stagger:0.3 })
 					.add('f2','+=1' )
-					.to('#bts-logo',{ scale: 0.52, y:-178, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
+					.to('#bts-logo',{ scale: 0.52,  y:-178, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
 					.add(writeInSvgTl(_path, 1), 'f2')
 					.from('#f2-txt', { alpha:0 }, 'f2+=0.4')
 					.from('.letter-box', { scaleX:0, y:10, stagger:0.05, duration:0.2}, '+=1')

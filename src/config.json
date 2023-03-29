@@ -57,7 +57,7 @@
 					"p": ["In the US, more than", "50% will be diagnosed", " with this condition at some", "point in their lifetime."]
 				},
 				"end": {
-					"logo":{"y":-250, "scale":0.52},
+					"logo":{"y":-250 },
 					"txt": ["Ohio, challenge", "what you know about","mental health."]
 				},
 				"width": 300, "height": 600
