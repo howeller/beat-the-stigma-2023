@@ -37,10 +37,13 @@
 				"approved": false,
 				"backup": false,
         "name": "BTS_M1_300x250",
+				"jsToUse": "BTS_M1_Skyscraper.js",
 				"frame2":{
+					"logo":{ "y":-39, "scale":0.38},
 					"p": ["In the US, more than 50% will be", "diagnosed with this condition at some", "point in their lifetime."]
 				},
 				"end": {
+					"logo":{ "y":-70},
 					"txt": ["Ohio, challenge what you know","about mental health."]
 				},
 				"width": 300, "height": 250
