@@ -19,7 +19,6 @@ function animate() {
 		.add(writeInSvgTl(_path, 1), 'f2')
 		.from('#f2-txt', { alpha:0 }, 'f2+=0.4')
 		.from('.letter-box', { scaleX:0, y:10, stagger:0.05, duration:0.2}, '+=1')
-		// .from('.init-letters', {alpha:0, stagger:0.1},"+=0.4")
 		.from('.missing-letters', {alpha:0, stagger:0.2},"+=3")
 		.add('end', '+=3')
 		.to('#bts-logo',{ y:-70, transformOrigin:'50% 0%', ease:'power3.out' }, 'end')
