@@ -64,24 +64,26 @@
 					"txt": ["Ohio, challenge", "what you know about","mental health."]
 				},
 				"width": 300, "height": 600
-			}
-		}
-	},
+			},
 			"BTS_M1_728x90": {
-				"html": "BTS_M1.html",
+				"html": "BTS_M1_Leader.html",
 				"approved": false,
 				"backup": false,
         "name": "BTS_M1_728x90",
+				"jsToUse": "BTS_M1_Leader.js",
+				"outlineSvg": "outline_M1_728x90.svg",
 				"frame2":{
-					"h1": ["ADDICTION IS OFTEN THE RESULT OF WHAT:"],
-					"list":["Genetics", "Traumatic experiences", "Mental illness", "All of the above"]
+					"logo":{ "y":-15, "x":1, "scale":0.44},
+					"p": ["In the US, more than 50% will be diagnosed with this condition at some point in their lifetime."]
 				},
 				"end": {
-					"margin": 28,
-					"txt": ["CHALLENGE WHAT YOU","KNOW  ABOUT ADDICTION."]
+					"logo":{"y":-250 },
+					"txt": ["Ohio, challenge what you know about mental health."]
 				},
 				"width": 728, "height": 90
-			},
+			}
+		}
+	},
 		"Message2":{
 			"group":{},
 			"BTS_M2_160x600": {
@@ -184,7 +186,7 @@
 				"frame2":{
 					"h1": ["ADDICTION IS:"],
 					"listMargin": 6,
-					"list":["A character flaw", "A lack of willpower", "Impossible to overcome", "Highly treatable"]
+					"list":["A character flaw A lack of willpower", "Impossible to overcome", "Highly treatable"]
 					
 				},
 				"end": {

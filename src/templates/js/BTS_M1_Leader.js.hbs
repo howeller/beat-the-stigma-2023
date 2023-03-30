@@ -1,0 +1,39 @@
+{{> svgAni.js}}
+
+function animate() {
+	// cl('{{name}}');
+	let clipClosed = 'polygon(-1% 0%, 0% 0%, 0% 100%, -1% 100%)',
+		clipOpen = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+		_path = id('outlinePath'),
+		_hiddenLetters = ['#letter3','#letter4','#letter8','#letter11']
+
+	// Init and set the width of the SVG path stroke. Needs to be fat enough to fill SVG shape
+	initSvgPath(_path, 2);
+
+	tl
+		.add('start')
+		.from('#banner', { autoAlpha:0 },'start')
+		.from(['#beat','#the','#stigma'], { scale:0.5, transformOrigin:'50% 50%', alpha:0, stagger:0.3 })
+		.add('f2','+=1' )
+		.to('#bts-logo',{ scale: {{frame2.logo.scale}}, {{#if frame2.logo.x}}x:{{frame2.logo.x}}, {{/if}}y:{{frame2.logo.y}}, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
+		.add(writeInSvgTl(_path, 1), 'f2')
+		.from('#f2-txt', { alpha:0 }, 'f2+=0.4')
+		.from('.letter-box', { scaleX:0, y:10, stagger:0.05, duration:0.2}, '+=1')
+		.from('.missing-letters', {alpha:0, stagger:0.2},"+=3")
+		.add('end', '+=3')
+		// .to('#bts-logo',{ {{#if end.logo.scale}}scale:{{end.logo.scale}}, {{/if}}{{#if frame2.logo.x}}x:{{frame2.logo.x}}, {{/if}}y:{{end.logo.y}}, transformOrigin:'50% 0%', ease:'power3.out' }, 'end')
+		.to(['#bts-logo, #outline','#f2-container'], {autoAlpha:0}, 'end')
+		.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.5 })
+		.add(initReplayAction)
+		.from(replay.container, { autoAlpha: 0 })
+		// .seek('f2');
+		// .seek('end');
+		;
+		{{#if_eq (showFpo) '1'}}tl.pause('1.5');{{/if_eq}}
+		{{#if_eq (showFpo) '2'}}tl.pause('8');{{/if_eq}}
+		{{#if_eq (showFpo) '3'}}tl.pause('10');{{/if_eq}}
+		{{#if_eq (showFpo) '4'}}tl.pause('15');{{/if_eq}}
+		// tl.pause('1.5');
+		// tl.pause('4.5');
+		console.log('Animation Runtime is ' + tl.endTime());
+}

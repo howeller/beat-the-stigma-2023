@@ -1,0 +1,30 @@
+
+{{!> outline_M1_300x250.svg}}
+{{> (getOutlineSvg)}}
+<span class="sr-only">{{group.frame2.txt}}</span>
+<div id="f2-container" class="full-size" aria-hidden="true">
+	<div id="f2-letter-line1" class="letter-line-container">
+		{{#each group.frame2.line1}}
+		<div class="letter-box"><span class="{{getLetterClass .. (int @index)}}">{{{.}}}</span></div>
+		{{/each~}}&nbsp;&nbsp;
+		{{~#each group.frame2.line2 }}
+		<div class="letter-box"><span class="{{getLetterClass .. (letterCount @index)}}">{{{.}}}</span></div>
+		{{/each~}}
+	</div>
+	<p id="f2-txt">
+		{{#each frame2.p}}
+		{{{.}}}
+		{{~#unless @last}}<br/>{{/unless}}
+		{{~/each}}
+	</h1>
+</div>
+
+<div id="end-container">
+	<p id="end-txt">{{#each end.txt}}
+		{{{.}}}{{#unless @last}}<br/>{{/unless}}{{/each}}
+	</p>
+	<button id="cta" tabindex="0" aria-label="{{global.cta.txt}}">
+		<span id="cta-txt">{{global.cta.txt}}</span>
+	</button>
+	{{> ohio_logo.svg}}
+</div>

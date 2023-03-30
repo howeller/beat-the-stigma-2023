@@ -1,44 +1,95 @@
-/* Frame2 Quiz */
+/* Frame2 */
 
-div#f2-container h1{
-	color: var(--teal);
-	font-size: 26px;
-	line-height: 90%;
-	text-align: center;
-	margin: 15px 0;
-	width: 100%;
-}
-
-ol.f2-txt{
-	color: white;
-	font-weight: 600;
-	font-size: 16px;
-	line-height: 18px;
-	list-style-type: upper-alpha;
+div.letter-line-container {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: no-wrap;
 	justify-content: center;
 	width: 100%;
 }
 
-/* F2 Individual lines */
-
-ol.f2-txt li {
-	display: list-item;
-	list-style-position: inside;
-	padding: 1px 4px;
-	margin: 0px 10px;
+#f2-letter-line1 {
+	margin-top: 35px;
+	display: inline-block;
 }
 
-/* The highlighted lines */
-
-li.highlight-txt{
-	background: linear-gradient(to right, var(--teal) 49.9%, rgba(0, 0, 0, 0.0) 49.9%);
-	background-size: 200% 100%;
-	background-position:right bottom;
-	overflow: hidden;
+/* F2 Individual letters */
+div.letter-box {
+	background-color: var(--teal);
 	border-radius: 2px;
-	width: -moz-fit-content;
-	width: fit-content;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 14px;
+	height: 20px;
+	margin: 0 2px;
+	font-size: 17px;
+	{{~#if (showFpo)}}background-color: rgba(255, 0, 0, 0.4); color:black !important;{{/if~}}
+}
+
+/* Add space in between words */
+/* #f2-letter-line1 div:nth-child(6) {
+	margin-right: 7px; 
+}
+#f2-letter-line1 div:nth-child(7) {
+	margin-left: 8px;
+}*/
+
+p#f2-txt {
+	font-size: 14px;
+	line-height: 1.1;
+	margin-top: 5px;
+	{{~#if (showFpo)}}color: red;{{/if~}}
+}
+
+svg#outline {
+	top: 18px;
+	left: 42px;
+	width: 645px;
+}
+
+/* Endframe */
+#end-container {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	/* text-align: center; */
+}
+#end-container * {
+	position: relative !important;
+	display: inline-block;
+}
+
+#end-txt{
+	font-size: 19px;
+	letter-spacing: -0.2px;
+	margin-left: 17px;
+	{{~#if (showFpo)}}color: red;{{/if~}}
+}
+
+/* CTA Btn */
+
+#cta {
+	background-color: var(--teal);
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 31px;
+	margin-right: 38px;
+	padding: 6px 8px;
+	font-size: 13px;
+	letter-spacing: -0.5px;	
+	{{~#if (showFpo)}}background-color: rgba(255, 0, 0, 0.4); color:red{{/if~}}
+}
+
+#cta-txt {
+	white-space: nowrap;
+	width: auto;
+}
+
+svg#ohio-logo{
+	width: 36px;
+	/* margin-left: 20px; */
 }
