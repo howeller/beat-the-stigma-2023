@@ -24,7 +24,7 @@
 				"outlineSvg": "outline_M1_160x600.svg",
 				"frame2":{
 					"logo":{ "x": -55, "y":-136, "scale":0.61},
-					"p": ["In the US, more than", "50% will be diagnosed", " with this condition", "at some point", "in their lifetime."]
+					"p": ["In the US, more than", "50% will be diagnosed", "with this condition", "at some point in", "their lifetime."]
 				},
 				"end": {
 					"logo":{ "x": -57, "y":-248, "scale":0.76},
@@ -82,10 +82,42 @@
 				},
 				"width": 728, "height": 90
 			}
-		}
-	},
+		},
 		"Message2":{
 			"group":{},
+			"BTS_M2_300x250": {
+				"html": "BTS_M2.html",
+				"approved": false,
+				"backup": false,
+        "name": "BTS_M2_300x250",
+				"outlineSvg": "outline_M2_300x250.svg",
+				"frame2":{
+					"logo":{ "x":0, "y":-88, "scale":0.5},
+					"headerTxt": "Unhelpful things to say to someone<br>living with depression:",
+					"txt":[
+						"Snap out of it",
+						"Push through it",
+						"But your life seems great",
+						"Everyone gets sad"
+					]
+				},
+				"frame3":{
+					"h1": "Supportive things to say to someone<br>living with depression:",
+					"txt":[
+						"I’m here for you",
+						"You’re not alone",
+						"How can I support you?",
+						"Talking to someone could help"
+					]
+				},
+				"end": {
+					"logo":{ "y":0, "x":0, "scale":0.5},
+					"txt": "Ohio, challenge what you know<br>about mental health."
+				},
+				"width": 300, "height": 250
+			}
+		}
+	},
 			"BTS_M2_160x600": {
 				"html": "BTS_M2.html",
 				"approved": false,
@@ -117,32 +149,7 @@
 				},
 				"width": 160, "height": 600
 			},
-			"BTS_M2_300x250": {
-				"html": "BTS_M2.html",
-				"approved": false,
-				"backup": false,
-        "name": "BTS_M2_300x250",
-				"frame2":{
-					"marginTop":38,
-					"marginLeft": 43,
-					"h1": ["ADDICTION IS:"],
-					"list":[
-						"A character flaw",
-						"A lack of willpower",
-						"Impossible to <br/><span class=\"line-indent\">overcome</span>",
-						"Highly treatable"
-					],
-					"strikeList":[
-						"A character flaw",
-						"A lack of willpower",
-						"Impossible to </span><br/><span class=\"strikethrough line-indent\">overcome"
-					]
-				},
-				"end": {
-					"txt": ["CHALLENGE WHAT","YOU KNOW ABOUT","ADDICTION."]
-				},
-				"width": 300, "height": 250
-			},
+
 			"BTS_M2_300x600": {
 				"html": "BTS_M2.html",
 				"approved": false,
@@ -194,8 +201,7 @@
 					"txt": ["CHALLENGE WHAT YOU","KNOW ABOUT ADDICTION."]
 				},
 				"width": 728, "height": 90
-			}
-		},
+			},
 		"Message3":{
 			"group":{},
 			"BTS_M3_160x600": {
