@@ -1,15 +1,56 @@
-<h1>{{#each frame2.h1}}
-	{{{.}}}{{#unless @last}}<br/>{{/unless}}{{/each}}
-</h1>
+<div id="f1-container" class="full-size">
+	{{~#unless (showFpo)}}<img id="bg1" class="full-size" src="images/bg1_2x.jpg" alt=""/>{{/unless}}
+	{{#if (showFpo)}}<img src="../../fpo/{{name}}/{{getFpoName}}" class="full-size" width="{{width}}" />{{/if}}
+</div>
 
-<ol id="f2-t1" class="f2-txt" type="A">{{#each frame2.list}}
-	{{#unless @last}}<li class="wrong-answer">{{{.}}}</li>{{else}}<li id="answer" class="highlight-txt">{{{.}}}</li>{{/unless}}{{/each}}{{!-- 
-<!-- 
-	WRAP THE TXT INSIDE A IF YOU NEED TO CONTROL THE SPACE BETWEEN MARKER AND TXT
-	{{#unless @last}}<li class="wrong-answer"><span>{{{.}}}</span></li>{{else}}<li id="answer" class="highlight-txt"><span>{{{.}}}</span></li>{{/unless}}{{/each}} -->--}}
-</ol>
-<!-- Duplicate list of strike throughs -->
-<ol id="f2-strike" class="f2-txt" type="A" aria-hidden="true">{{#each frame2.strikeList}}
-	<li><span class="strikethrough line1">{{{.}}}</span></li>{{/each}}
-</ol>
-<span class="sr-only">The answer is D. {{frame2.list.[3]}}</span>
+<div id="f2-container" class="full-size">
+	<img id="bg2" class="full-size" src="images/bg2_2x.jpg" alt=""/>
+	<div id="red-overlay" class="bg-blend full-size"></div>
+		{{#if (showFpo)}}<img src="../../fpo/{{name}}/{{getFpoName}}" class="full-size" width="{{width}}" />{{/if}}
+		{{> (getHeaderSvg)}}
+	<div id="game1-wrapper" class="abs game-txt game-wrapper">
+		<p id="question1" class="header-txt">
+			{{{frame2.headerTxt}}}
+		</p>
+		<ol id="g1-answers" class="game-txt" type="A">
+			{{#each frame2.txt}}
+			<li>{{{.}}}</li>
+			{{/each}}
+		</ol>
+			<!-- Duplicate list of strike throughs -->
+		<ol id="g1-wrong-answers" class="game-txt" type="A" aria-hidden="true">
+			{{#each frame2.txt}}
+			<li><span class="strikethrough">{{{.}}}</span></li>
+			{{/each}}
+		</ol>
+	</div>
+	
+	<div id="game2-wrapper" class="abs game-txt game-wrapper">
+		<p id="question2" class="header-txt">
+			{{{frame3.headerTxt}}}
+		</p>
+		<ol id="g2-answers" class="game-txt" type="A">
+			{{#each frame3.txt}}
+			<li>{{{.}}}</li>
+			{{/each}}
+		</ol>
+	</div>
+</div>
+
+<div id="end-container" class="full-size">
+	<p id="end-txt">
+		{{#each end.txt}}
+		{{{.}}}
+		{{~#unless @last~}}<br/>
+		{{/unless}}
+		{{/each}}
+	</p>
+	<button id="cta" tabindex="0" aria-label="{{global.cta.txt}}">
+		<span id="cta-txt">{{{global.cta.txt}}}</span>
+	</button>
+	{{> ohio_logo.svg}}
+</div>
+
+<div id="logo-container" class="full-size">
+	<img id="bts-logo" src="images/logo_2x.png" alt="BEAT THE STIGMA"/>
+</div>

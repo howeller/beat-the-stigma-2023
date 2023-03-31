@@ -59,6 +59,25 @@ var objData = {
 							manualzip: true
 						}
 					]
+				},
+        {	
+					folderName: "html",
+					title: "Message2 - HTML Standard Media",
+					bannerList: [
+,
+						{
+							overwriteSizeDisplay: "", 
+							label: "BTS_M2_300x250",
+							src: "BTS_M2_300x250",
+							w: 300,
+							h: 250,
+							type: "html5",
+							approved: false,
+							dload: true,
+							backup: false,
+							manualzip: true
+						}
+					]
 				}			]
 		}, 
 	]

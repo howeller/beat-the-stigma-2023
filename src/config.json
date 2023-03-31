@@ -84,7 +84,10 @@
 			}
 		},
 		"Message2":{
-			"group":{},
+			"group":{
+				"blueFill": "rgba(7,1,51,0.5)",
+				"redFill": ""
+			},
 			"BTS_M2_300x250": {
 				"html": "BTS_M2.html",
 				"approved": false,
@@ -102,7 +105,7 @@
 					]
 				},
 				"frame3":{
-					"h1": "Supportive things to say to someone<br>living with depression:",
+					"headerTxt": "Supportive things to say to someone<br>living with depression:",
 					"txt":[
 						"I’m here for you",
 						"You’re not alone",
@@ -111,8 +114,8 @@
 					]
 				},
 				"end": {
-					"logo":{ "y":0, "x":0, "scale":0.5},
-					"txt": "Ohio, challenge what you know<br>about mental health."
+					"logo":{ "y":-78},
+					"txt": ["Ohio, challenge what you know","about mental health."]
 				},
 				"width": 300, "height": 250
 			}
