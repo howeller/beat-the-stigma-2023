@@ -8,6 +8,7 @@
 	"english":{
 		"Message1":{
 			"group":{
+				"replayColor":"#369ad8",
 				"frame2":{
 					"txt": "MENTAL ILLNESS",
 					"line1": ["M","E","N","T","A","L"],
@@ -86,14 +87,14 @@
 		"Message2":{
 			"group":{
 				"blueFill": "rgba(7,1,51,0.5)",
-				"redFill": ""
+				"replayColor":"rgba(255,255,255,0.7)"
 			},
 			"BTS_M2_300x250": {
-				"html": "BTS_M2.html",
+        "name": "BTS_M2_300x250",
 				"approved": false,
 				"backup": false,
-        "name": "BTS_M2_300x250",
-				"outlineSvg": "outline_M2_300x250.svg",
+				"html": "BTS_M2.html",
+				"_outlineSvg": "outline_M2_300x250.svg",
 				"frame2":{
 					"logo":{ "x":0, "y":-88, "scale":0.5},
 					"headerTxt": "Unhelpful things to say to someone<br>living with depression:",
@@ -112,6 +113,34 @@
 						"How can I support you?",
 						"Talking to someone could help"
 					]
+				},
+				"end": {
+					"logo":{ "y":-78},
+					"txt": ["Ohio, challenge what you know","about mental health."]
+				},
+				"width": 300, "height": 250
+			}
+		},
+		"Message3":{
+			"group":{
+				"replayColor":"rgba(255,255,255,0.7)"
+			},
+			"BTS_M3_300x250": {
+        "name": "BTS_M3_300x250",
+				"approved": false,
+				"backup": false,
+				"html": "BTS_M2.html",
+				"jsToUse": "BTS_M3_300x250.js",
+				"_cssToUse":"BTS_M2_300x250.css",
+				"frame2":{
+					"logo":{ "x":0, "y":-88, "scale":0.5},
+					"txt": "Someone tells you they’ve been living <br>with anxiety or depression. You say..."
+				},
+				"frame3":{
+					"txt": "I’m here for you."
+				},
+				"frame4":{
+					"txt": "You’re not alone."
 				},
 				"end": {
 					"logo":{ "y":-78},
@@ -205,8 +234,6 @@
 				},
 				"width": 728, "height": 90
 			},
-		"Message3":{
-			"group":{},
 			"BTS_M3_160x600": {
 				"cssToUse": "BTS_M2_160x600.css",
 				"html": "BTS_M2.html",
@@ -238,34 +265,6 @@
 					"txt": ["CHALLENGE","WHAT YOU","KNOW","ABOUT","MENTAL","HEALTH."]
 				},
 				"width": 160, "height": 600
-			},
-			"BTS_M3_300x250": {
-				"cssToUse":"BTS_M2_300x250.css",
-				"html": "BTS_M2.html",
-				"approved": false,
-				"backup": false,
-        "name": "cssToUse",
-				"jsToUse": "BTS_M2_300x250.js",
-				"frame2":{
-					"marginTop":25,
-					"marginLeft": 40,
-					"h1": ["MENTAL", "HEALTH IS:"],
-					"list":[
-						"A sign of weakness",
-						"Something<br/><span class=\"line-indent\">you can control</span>",
-						"Unimportant",
-						"Health"
-					],
-					"strikeList":[
-						"A sign of weakness",
-						"Something </span><br/><span class=\"strikethrough line-indent\">you can control",
-						"Unimportant"
-					]
-				},
-				"end": {
-					"txt": ["CHALLENGE WHAT","YOU KNOW ABOUT","MENTAL HEALTH."]
-				},
-				"width": 300, "height": 250
 			},
 			"BTS_M3_300x600": {
 				"cssToUse": "BTS_M2_300x600.css",
@@ -319,5 +318,4 @@
 				},
 				"width": 728, "height": 90
 			}
-		}
 }	

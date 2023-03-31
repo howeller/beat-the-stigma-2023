@@ -244,7 +244,6 @@
 			padding: 3px 7px;
 			font-size: 15px;
 			letter-spacing: -0.5px;
-			visibility: visible;
 		}
 		
 		#cta-txt {
@@ -317,7 +316,7 @@
 		<div class="border full-size" aria-hidden="true"></div>
 		<button id="clicker" class="clickable full-size" aria-label="Click to LEARN MORE"></button>
 		<button id="replay-container" class="replay abs" aria-label="replay">
-			<svg id="replaySvg" viewBox="0 0 40.8 40.8" xml:space="preserve" enable-background="new 0 0 40.8 40.8" aria-hidden="true"><path id="replayPath" d="M32.8 28.4l8-8h-5.7c0-9-6.7-15.1-15-15.1 -8.1 0-15 6.8-15 14.9s6.9 14.9 15 14.9c2.4 0 4.6-0.6 6.5-1.6l-2.3-4.1c-1.2 0.7-2.6 1-4.3 1 -5.6 0-10.3-4.7-10.3-10.3 0-5.6 4.7-10.2 10.3-10.2 5.7 0 10.3 3.4 10.3 10.4h-5.7L32.8 28.4z" style="fill:#369ad8"/></svg>
+			<svg id="replaySvg" viewBox="0 0 40.8 40.8" xml:space="preserve" enable-background="new 0 0 40.8 40.8" aria-hidden="true"><path id="replayPath" d="M32.8 28.4l8-8h-5.7c0-9-6.7-15.1-15-15.1 -8.1 0-15 6.8-15 14.9s6.9 14.9 15 14.9c2.4 0 4.6-0.6 6.5-1.6l-2.3-4.1c-1.2 0.7-2.6 1-4.3 1 -5.6 0-10.3-4.7-10.3-10.3 0-5.6 4.7-10.2 10.3-10.2 5.7 0 10.3 3.4 10.3 10.4h-5.7L32.8 28.4z" style="fill:rgba(255,255,255,0.7)"/></svg>
 		</button>
 	</div>
 	<script type="text/javascript">
@@ -401,11 +400,9 @@
 					.add('list2In')
 					.from('#g2-answers li', { x:-300, duration:0.3, stagger:1}, 'list2In')
 					.add('f3Out','+=1.5	')
-					// .to('#g2-answers li', {x:300, duration:0.3, stagger:.1}, 'f3Out')
 					.to(['#f2-container'], {alpha:0}, 'f3Out')
 					.to('#bts-logo',{ y:-78, transformOrigin:'50% 0%', ease:'power3.out' }, 'f3Out')
 					.add('end')
-					// .to(['#outline','#f2-container'], {autoAlpha:0}, 'end')
 					.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.1 }, 'end')
 					.add(initReplayAction)
 					.from(replay.container, { autoAlpha: 0 })
