@@ -1,5 +1,8 @@
 
-{{!> outline_M1_300x250.svg}}
+<div id="f1-container" class="full-size">
+	{{> bts_logo.svg}}
+</div>
+
 {{> (getOutlineSvg)}}
 <span class="sr-only">{{group.frame2.txt}}</span>
 <div id="f2-container" class="full-size" aria-hidden="true">
@@ -16,14 +19,18 @@
 	<p id="f2-txt">
 		{{#each frame2.p}}
 		{{{.}}}
-		{{~#unless @last}}<br/>{{/unless}}
-		{{~/each}}
-	</h1>
+		{{~#unless @last}}<br/>{{~/unless}}
+		{{/each}}
+	</p>
 </div>
 
 <div id="end-container" class="full-size">
-	<p id="end-txt">{{#each end.txt}}
-		{{{.}}}{{#unless @last}}<br/>{{/unless}}{{/each}}
+	<p id="end-txt">
+		{{#each end.txt}}
+		{{{.}}}
+		{{~#unless @last~}}<br/>
+		{{/unless}}
+		{{/each}}
 	</p>
 	<button id="cta" tabindex="0" aria-label="{{global.cta.txt}}">
 		<span id="cta-txt">{{global.cta.txt}}</span>

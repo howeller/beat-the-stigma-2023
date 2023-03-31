@@ -38,11 +38,14 @@ button, button.abs {
 	cursor: pointer;
 	overflow: hidden;
 	outline: none;
+	{{~#if (showFpo)}}visibility: hidden;{{/if}}
 }
 
 button:focus, button.abs:focus, .fake-button:focus {
 	outline: 5px solid var(--teal);
 }
+
+img {	object-fit: contain; }
 
 .border {
 	border: 1px solid black;

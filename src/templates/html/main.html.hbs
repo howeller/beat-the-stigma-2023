@@ -22,13 +22,8 @@
 
 <body>
 	<div id="banner" class="full-size" role="banner">
-		{{#if (showFpo)}}<img src="../../fpo/{{name}}/{{getFpoName}}" class="full-size" width="{{width}}" />{{/if}}
-		<div id="f1-container" class="full-size">
-			{{> bts_logo.svg}}
-		</div>
-
+		{{~#if (showFpo)}}<img src="../../fpo/{{name}}/{{getFpoName}}" class="full-size" width="{{width}}" />{{/if}}
 		{{> (getHtml)}}
-
 		<div class="border full-size" aria-hidden="true"></div>
 		<button id="clicker" class="clickable full-size" aria-label="Click to {{global.cta.txt}}"></button>
 		<button id="replay-container" class="replay abs" aria-label="replay">
