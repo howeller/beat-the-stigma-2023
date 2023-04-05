@@ -22,7 +22,7 @@ function animate() {
 		.to('#bts-logo',{ scale: {{frame2.logo.scale}}, {{#if frame2.logo.x}}x:{{frame2.logo.x}}, {{/if}}y:{{frame2.logo.y}}, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
 		.add(writeInSvgTl(_path, 0.5), 'f2+=.2')
 		.from(['#bg2', '#red-overlay'], {alpha:0}, 'f2+=.2')
-		.from(['#outlinePath'], {'fill-opacity':0}, 'f2+=.2')
+		.from(['#outlinePath'], {'fill-opacity':0, ease:'power3.in'}, 'f2+=.2')
 		.from('#question1', {alpha:0}, '-=.3')
 		.add('list1In', '+=.5')
 		.from('#g1-answers li', { x:-{{width}}, duration:0.3, stagger:.2}, 'list1In')
