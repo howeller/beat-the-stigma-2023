@@ -81,17 +81,11 @@
 		}
 		
 		#banner {
+			color: white;
 			visibility: hidden;
 			position: relative;
 			overflow: hidden;
 			background-color: var(--dark-blue);
-		}
-		
-		#banner * {
-			color: white;
-			font-weight: 700;
-			line-height: 1;	
-			text-align: center;
 		}
 		.sr-only {
 			border: 0 !important;
@@ -143,6 +137,13 @@
 			left: 5px;
 			top: 5px;
 		}
+		#banner * {
+			color: white;
+			font-weight: 700;
+			line-height: 1;
+			text-align: center;
+		}
+		
 		/* Frame1 */
 		
 		div#f1-container{
@@ -353,7 +354,7 @@
 					.from('.missing-letters', {alpha:0, stagger:0.2},"+=3")
 					.add('end', '+=3')
 					.to('#bts-logo',{ y:-70, transformOrigin:'50% 0%', ease:'power3.out' }, 'end')
-					.to(['#outline','#f2-container'], {autoAlpha:0}, 'end')
+					.to(['#outline','#f2-container'], {alpha:0}, 'end')
 					.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.5 })
 					.add(initReplayAction)
 					.from(replay.container, { autoAlpha: 0 })

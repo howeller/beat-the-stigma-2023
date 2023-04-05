@@ -22,7 +22,7 @@ function animate() {
 		.from('.missing-letters', {alpha:0, stagger:0.2},"+=3")
 		.add('end', '+=3')
 		// .to('#bts-logo',{ {{#if end.logo.scale}}scale:{{end.logo.scale}}, {{/if}}{{#if frame2.logo.x}}x:{{frame2.logo.x}}, {{/if}}y:{{end.logo.y}}, transformOrigin:'50% 0%', ease:'power3.out' }, 'end')
-		.to(['#bts-logo, #outline','#f2-container'], {autoAlpha:0}, 'end')
+		.to(['#bts-logo, #outline','#f2-container'], {alpha:0}, 'end')
 		.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.5 })
 		.add(initReplayAction)
 		.from(replay.container, { autoAlpha: 0 })
