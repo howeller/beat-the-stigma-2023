@@ -17,10 +17,10 @@
 				}
 			},
 			"BTS_M1_160x600": {
-				"html": "BTS_M1.html",
 				"approved": false,
 				"backup": false,
         "name": "BTS_M1_160x600",
+				"html": "BTS_M1.html",
 				"jsToUse": "BTS_M1_Skyscraper.js",
 				"outlineSvg": "outline_M1_160x600.svg",
 				"frame2":{
@@ -34,10 +34,10 @@
 				"width": 160, "height": 600
 			},
 			"BTS_M1_300x250": {
-				"html": "BTS_M1.html",
 				"approved": false,
 				"backup": false,
         "name": "BTS_M1_300x250",
+				"html": "BTS_M1.html",
 				"jsToUse": "BTS_M1_Skyscraper.js",
 				"frame2":{
 					"logo":{ "y":-39, "scale":0.38},
@@ -50,10 +50,10 @@
 				"width": 300, "height": 250
 			},
 			"BTS_M1_300x600": {
-				"html": "BTS_M1.html",
 				"approved": false,
 				"backup": false,
         "name": "BTS_M1_300x600",
+				"html": "BTS_M1.html",
 				"jsToUse": "BTS_M1_Skyscraper.js",
 				"outlineSvg": "outline_M1_300x600.svg",
 				"frame2":{
@@ -67,10 +67,10 @@
 				"width": 300, "height": 600
 			},
 			"BTS_M1_728x90": {
-				"html": "BTS_M1_Leader.html",
 				"approved": false,
 				"backup": false,
         "name": "BTS_M1_728x90",
+				"html": "BTS_M1_Leader.html",
 				"jsToUse": "BTS_M1_Leader.js",
 				"outlineSvg": "outline_M1_728x90.svg",
 				"frame2":{

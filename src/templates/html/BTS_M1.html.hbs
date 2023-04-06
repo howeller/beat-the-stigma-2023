@@ -5,13 +5,13 @@
 
 {{> (getOutlineSvg)}}
 <span class="sr-only">{{group.frame2.txt}}</span>
-<div id="f2-container" class="full-size" aria-hidden="true">
-	<div id="f2-letter-line1" class="letter-line-container">
+<div id="f2-container" class="full-size">
+	<div id="f2-letter-line1" class="letter-line-container" aria-hidden="true">
 		{{#each group.frame2.line1}}
 		<div class="letter-box"><span class="{{getLetterClass .. (int @index)}}">{{{.}}}</span></div>
 		{{/each}}
 	</div>
-	<div id="f2-letter-line2" class="letter-line-container">
+	<div id="f2-letter-line2" class="letter-line-container" aria-hidden="true">
 		{{#each group.frame2.line2 }}
 		<div class="letter-box"><span class="{{getLetterClass .. (letterCount @index)}}">{{{.}}}</span></div>
 		{{/each}}
