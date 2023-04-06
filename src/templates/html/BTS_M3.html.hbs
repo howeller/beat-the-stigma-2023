@@ -1,0 +1,31 @@
+<img id="pic1" class="full-size" src="images/pic1_2x.jpg" alt=""/>
+{{#each frames}}
+<img id="pic{{frameCount @index}}" class="full-size" src="images/pic{{frameCount @index}}_2x.jpg" alt=""/>
+{{/each}}
+{{#if (showFpo)}}<img src="../../fpo/{{name}}/{{getFpoName}}" class="full-size" width="{{width}}" />{{/if}}
+
+<div id="game-wrapper" class="game-txt game-wrapper abs">
+	{{> (getHeaderSvg)}}
+	<div id="txt-wrapper">
+		{{#each frames}}
+		<p id="txt{{frameCount @index}}" class="abs">{{{txt}}}</p>
+		{{/each}}
+	</div>
+</div>
+
+<div id="end-container" class="full-size">
+	{{#unless (showFpo)}}<img id="pic5" src="images/pic5_2x.jpg" alt="" class="full-size"/>{{/unless}}
+	<div id="end-wrapper" class="full-size">
+		<p id="end-txt">
+			{{{end.txt}}}
+		</p>
+		<button id="cta" tabindex="0" aria-label="{{global.cta.txt}}">
+			<span id="cta-txt">{{global.cta.txt}}</span>
+		</button>
+		{{> ohio_logo.svg}}
+	</div>
+</div>
+
+<div id="f1-container" class="full-size">
+	{{> bts_logo.svg}}
+</div>

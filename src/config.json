@@ -87,6 +87,7 @@
 		"Message2":{
 			"group":{
 				"blueFill": "rgba(7,1,51,0.5)",
+				"redFill": "#4f132f",
 				"replayColor":"rgba(255,255,255,0.7)"
 			},
 			"BTS_M2_300x250": {
@@ -129,22 +130,29 @@
         "name": "BTS_M3_300x250",
 				"approved": false,
 				"backup": false,
-				"html": "BTS_M2.html",
+				"html": "BTS_M3.html",
 				"jsToUse": "BTS_M3_300x250.js",
-				"_cssToUse":"BTS_M2_300x250.css",
-				"frame2":{
-					"logo":{ "x":0, "y":-88, "scale":0.5},
+				"headerSvg":"header_M3_300x250.svg",
+				"f2Logo":{ 
+					"x":0, "y":50, "scale":0.4
+				},
+				"frames": [
+					{"txt": "Someone tells you they’ve been living <br>with anxiety or depression. You say..."},
+					{"txt": "I’m here for you."},
+					{"txt": "You’re not alone."}
+				],
+				"_frame2":{
 					"txt": "Someone tells you they’ve been living <br>with anxiety or depression. You say..."
 				},
-				"frame3":{
+				"_frame3":{
 					"txt": "I’m here for you."
 				},
-				"frame4":{
+				"_frame4":{
 					"txt": "You’re not alone."
 				},
 				"end": {
-					"logo":{ "y":-78},
-					"txt": ["Ohio, challenge what you know","about mental health."]
+					"logo":{ "y":-78, "scale": 0.5},
+					"txt": "Ohio, challenge what you know<br>about mental health."
 				},
 				"width": 300, "height": 250
 			}
@@ -268,7 +276,7 @@
 			},
 			"BTS_M3_300x600": {
 				"cssToUse": "BTS_M2_300x600.css",
-				"html": "BTS_M2.html",
+				"html": "BTS_M3.html",
 				"approved": false,
 				"backup": false,
         "name": "cssToUse",

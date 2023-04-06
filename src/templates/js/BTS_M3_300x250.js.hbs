@@ -1,0 +1,52 @@
+{{> svgAni.js}}
+
+function animate() {
+	// cl('{{name}}');
+	tl = gsap.timeline({ defaults:{ duration:0.3 }});
+
+	_clipOpen = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', // close on right
+	_clipClosed = 'polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)',
+	_path = id('outlinePath'),
+	_clipSpeed = 0.8;
+
+	// Init and set the width of the SVG path stroke. Needs to be fat enough to fill SVG shape
+	initSvgPath(_path, 2);
+
+	tl
+		.add('start')
+		// .set('#outlinePath', { stroke:_outlineRed/*  attr:{stroke:outlineRed }*/})
+		.from('#banner', { autoAlpha:0, duration:0.3 },'start')
+		.from('#bts-logo', { scale:0.5, transformOrigin:'50% 50%', alpha:0})
+		.to('#bts-logo',{ scale: {{f2Logo.scale}}, {{#if f2Logo.x}}x:{{f2Logo.x}}, {{/if}}y:{{f2Logo.y}}, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, '+=1')
+		.add('f2', '-=.3' )
+		.fromTo('#pic2', {clipPath: _clipClosed}, {clipPath: _clipOpen, duration:_clipSpeed, ease:'power3.easein' }, 'f2-=1')
+		.add(writeInSvgTl(_path, 1), 'f2')
+		.from(_path, {fill:'rgba(7,1,51,0.0)'}, 'f2')		
+		.from('#txt2', {alpha:0})
+		.add('f3', '+=4')
+		.to('#txt2', {alpha:0}, 'f3')
+		.fromTo('#pic3', {clipPath: _clipClosed}, {clipPath: _clipOpen, duration:_clipSpeed, ease:'power3.easein' }, 'f3')
+		.from('#txt3', {alpha:0})
+		.add('f4', '+=2')
+		.to('#txt3', {alpha:0}, 'f4')
+		.fromTo('#pic4', {clipPath: _clipClosed}, {clipPath: _clipOpen, duration:_clipSpeed, ease:'power3.easein' }, 'f4')
+		.from('#txt4', {alpha:0})
+		.add('f4Out', '+=2')
+		.to('#bts-logo',{ scale: {{end.logo.scale}}, {{#if end.logo.x}}x:{{end.logo.x}}, {{/if}}y:{{end.logo.y}}, transformOrigin:'50% 0%', duration:_clipSpeed, ease:'power3.out' }, 'f4Out')
+		.fromTo('#end-container', {clipPath: _clipClosed}, {clipPath: _clipOpen, duration:_clipSpeed, ease:'power3.easein' }, 'f4Out')
+		.add('end')
+		.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.1 }, 'end')
+		.add(initReplayAction)
+		.from(replay.container, { autoAlpha: 0 }, 'end')
+		// .seek('f2');
+		// .seek('f4Out');
+		// .seek('end');
+		{{#if_eq (showFpo) '1'}}tl.pause('1');{{/if_eq~}}
+		{{#if_eq (showFpo) '2'}}tl.pause('2.5');{{/if_eq~}}
+		{{#if_eq (showFpo) '3'}}tl.pause('8');{{/if_eq~}}
+		{{#if_eq (showFpo) '4'}}tl.pause('11');{{/if_eq~}}
+		{{#if_eq (showFpo) '5'}}tl.pause('15');{{/if_eq~}}
+	;
+	// tl.pause('8');
+		console.log('Animation Runtime is ' + tl.endTime());
+}

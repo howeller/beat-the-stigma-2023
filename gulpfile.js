@@ -41,7 +41,7 @@ const b1 = ['english', 'Message1'],
 	b2 = ['english', 'Message2'],
 	b3 = ['english', 'Message3'];
 
-const currentGroup = b2,
+const currentGroup = b3,
 	isProduction = false;
 
 /*
@@ -85,6 +85,7 @@ function build(version, copyImages=false, showFpoNum=''){
 				showFpo: function(){ return showFpoNum; },
 				isLeader: function(){ return this.width >= 728 },
 				letterCount: function(index){ return parseInt(index) + 7 }, // Returns int for line2 of letters
+				frameCount: function(index){ return parseInt(index) + 2 }, // Returns int frame# starting at 2
 				getLetterClass: function(scope, index){ return scope.group.frame2.hiddenLetters.includes(index) ? 'missing-letters': 'init-letters'; },
 				if_eq: helper.if_eq,
 				int: helper.int,
@@ -188,6 +189,7 @@ gulp.task('fpo1', () => { return build(currentGroup, true, '1')});
 gulp.task('fpo2', () => { return build(currentGroup, true, '2')});
 gulp.task('fpo3', () => { return build(currentGroup, true, '3')});
 gulp.task('fpo4', () => { return build(currentGroup, true, '4')});
+gulp.task('fpo5', () => { return build(currentGroup, true, '5')});
 
 // Clean Tasks
 gulp.task('clean', () => { return del([dir.dist+'**/*']); });
@@ -202,6 +204,7 @@ gulp.task('w1', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+
 gulp.task('w2', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+'*/**', dir.config], gulp.series('fpo2'))});
 gulp.task('w3', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+'*/**', dir.config], gulp.series('fpo3'))});
 gulp.task('w4', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+'*/**', dir.config], gulp.series('fpo4'))});
+gulp.task('w5', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+'*/**', dir.config], gulp.series('fpo5'))});
 
 // Zipping
 // gulp.task('zip1', () => { return zipFiles(b1) });
