@@ -257,6 +257,7 @@
 
 <body>
 	<div id="banner" class="full-size" role="banner">
+		<div class="sr-only">BEAT THE STIGMA</div>
 		<div id="f1-container" class="full-size"><img id="bg1" class="full-size" src="images/bg1_2x.jpg" alt=""/>
 			
 		</div>
@@ -375,6 +376,7 @@
 			
 				tl
 					.add('start')
+					// .set(_path, { fill:'#4f132f'})
 					.from('#banner', { autoAlpha:0, duration:0.3 },'start')
 					// .from('#bts-logo', { scale:0.5, transformOrigin:'50% 50%', alpha:0}, 'start')
 					// .from('#bg1', { scale:1.25, transformOrigin:'50% 50%', alpha:0}, '-=.25')
@@ -382,7 +384,7 @@
 					.to('#bts-logo',{ scale: 0.5, y:-88, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
 					.add(writeInSvgTl(_path, 0.5), 'f2+=.2')
 					.from(['#bg2', '#red-overlay'], {alpha:0}, 'f2+=.2')
-					.from(['#outlinePath'], {'fill-opacity':0, ease:'power3.in'}, 'f2+=.2')
+					.from([_path], {'fill-opacity':0, ease:'power3.in'}, 'f2+=.2')
 					.from('#question1', {alpha:0}, '-=.3')
 					.add('list1In', '+=.5')
 					.from('#g1-answers li', { x:-300, duration:0.3, stagger:.2}, 'list1In')
@@ -392,7 +394,7 @@
 					.to('#g1-wrong-answers li', {x:300, duration:0.3, stagger:.1}, 'f2Out')
 					.to(['#question1', '#red-overlay'], {alpha:0}, 'f2Out')
 					.add('f3', '-=.5')
-					.to('#outlinePath', {'fill':'rgba(7,1,51,0.5)', 'fill-opacity':1, stroke:_outlineBlue}, 'f3')
+					.to(_path, {'fill':'rgba(7,1,51,0.5)', 'fill-opacity':1, stroke:_outlineBlue}, 'f3')
 					.from('#question2', {alpha:0}, 'f3')
 					.add('list2In', 'f3+=.3')
 					.from('#g2-answers li', { x:-300, duration:0.3, stagger:.1}, 'list2In')
@@ -407,12 +409,7 @@
 					// .seek('list2In');
 					// .seek('f2Out');
 					// .seek('end');
-					
-					
-					
-					
-			
-				;
+					;
 					console.log('Animation Runtime is ' + tl.endTime());
 			}
 			/*

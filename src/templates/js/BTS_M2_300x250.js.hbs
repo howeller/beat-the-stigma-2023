@@ -15,6 +15,7 @@ function animate() {
 
 	tl
 		.add('start')
+		// .set(_path, { fill:'{{group.redFill}}'})
 		.from('#banner', { autoAlpha:0, duration:0.3 },'start')
 		// .from('#bts-logo', { scale:0.5, transformOrigin:'50% 50%', alpha:0}, 'start')
 		// .from('#bg1', { scale:1.25, transformOrigin:'50% 50%', alpha:0}, '-=.25')
@@ -22,7 +23,7 @@ function animate() {
 		.to('#bts-logo',{ scale: {{frame2.logo.scale}}, {{#if frame2.logo.x}}x:{{frame2.logo.x}}, {{/if}}y:{{frame2.logo.y}}, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
 		.add(writeInSvgTl(_path, 0.5), 'f2+=.2')
 		.from(['#bg2', '#red-overlay'], {alpha:0}, 'f2+=.2')
-		.from(['#outlinePath'], {'fill-opacity':0, ease:'power3.in'}, 'f2+=.2')
+		.from([_path], {'fill-opacity':0, ease:'power3.in'}, 'f2+=.2')
 		.from('#question1', {alpha:0}, '-=.3')
 		.add('list1In', '+=.5')
 		.from('#g1-answers li', { x:-{{width}}, duration:0.3, stagger:.2}, 'list1In')
@@ -32,7 +33,7 @@ function animate() {
 		.to('#g1-wrong-answers li', {x:{{width}}, duration:0.3, stagger:.1}, 'f2Out')
 		.to(['#question1', '#red-overlay'], {alpha:0}, 'f2Out')
 		.add('f3', '-=.5')
-		.to('#outlinePath', {'fill':'{{group.blueFill}}', 'fill-opacity':1, stroke:_outlineBlue}, 'f3')
+		.to(_path, {'fill':'{{group.blueFill}}', 'fill-opacity':1, stroke:_outlineBlue}, 'f3')
 		.from('#question2', {alpha:0}, 'f3')
 		.add('list2In', 'f3+=.3')
 		.from('#g2-answers li', { x:-{{width}}, duration:0.3, stagger:.1}, 'list2In')
@@ -47,10 +48,10 @@ function animate() {
 		// .seek('list2In');
 		// .seek('f2Out');
 		// .seek('end');
-		{{#if_eq (showFpo) '1'}}tl.pause('1.5');{{/if_eq}}
-		{{#if_eq (showFpo) '2'}}tl.pause('6.5');{{/if_eq}}
-		{{#if_eq (showFpo) '3'}}tl.pause('10');{{/if_eq}}
-		{{#if_eq (showFpo) '4'}}tl.pause('25');{{/if_eq}}
+		{{#if_eq (showFpo) '1'}}tl.pause('1.5');{{/if_eq~}}
+		{{#if_eq (showFpo) '2'}}tl.pause('6.5');{{/if_eq~}}
+		{{#if_eq (showFpo) '3'}}tl.pause('10');{{/if_eq~}}
+		{{#if_eq (showFpo) '4'}}tl.pause('25');{{/if_eq~}}
 
 	;
 		console.log('Animation Runtime is ' + tl.endTime());
