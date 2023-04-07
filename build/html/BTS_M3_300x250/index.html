@@ -313,7 +313,7 @@
 					.to('#bts-logo',{ scale: 0.4, y:50, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, '+=1')
 					.add('f2', '-=.3' )
 					.fromTo('#pic2', {clipPath: _clipClosed}, {clipPath: _clipOpen, duration:_clipSpeed, ease:'power3.easein' }, 'f2-=1')
-					.add(writeInSvgTl(_path, 1), 'f2')
+					.add(writeInSvgTl(_path, 0.5), 'f2')
 					.from(_path, {fill:'rgba(7,1,51,0.0)'}, 'f2')		
 					.from('#txt2', {alpha:0})
 					.add('f3', '+=4')
@@ -328,9 +328,9 @@
 					.to('#bts-logo',{ scale: 0.5, y:-78, transformOrigin:'50% 0%', duration:_clipSpeed, ease:'power3.out' }, 'f4Out')
 					.fromTo('#end-container', {clipPath: _clipClosed}, {clipPath: _clipOpen, duration:_clipSpeed, ease:'power3.easein' }, 'f4Out')
 					.add('end')
-					.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.1 }, 'end')
+					.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.4 }, 'end')
 					.add(initReplayAction)
-					.from(replay.container, { autoAlpha: 0 }, 'end')
+					.from(replay.container, { autoAlpha: 0 }, 'end+=.3')
 					// .seek('f2');
 					// .seek('f4Out');
 					// .seek('end');
