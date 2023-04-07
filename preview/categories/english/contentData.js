@@ -67,6 +67,18 @@ var objData = {
 ,
 						{
 							overwriteSizeDisplay: "", 
+							label: "BTS_M2_160x600",
+							src: "BTS_M2_160x600",
+							w: 160,
+							h: 600,
+							type: "html5",
+							approved: false,
+							dload: true,
+							backup: false,
+							manualzip: true
+						},
+						{
+							overwriteSizeDisplay: "", 
 							label: "BTS_M2_300x250",
 							src: "BTS_M2_300x250",
 							w: 300,

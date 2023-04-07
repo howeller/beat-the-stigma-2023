@@ -19,7 +19,7 @@
 			"BTS_M1_160x600": {
 				"approved": false,
 				"backup": false,
-        "name": "BTS_M1_160x600",
+				"name": "BTS_M1_160x600",
 				"html": "BTS_M1.html",
 				"jsToUse": "BTS_M1_Skyscraper.js",
 				"outlineSvg": "outline_M1_160x600.svg",
@@ -36,7 +36,7 @@
 			"BTS_M1_300x250": {
 				"approved": false,
 				"backup": false,
-        "name": "BTS_M1_300x250",
+				"name": "BTS_M1_300x250",
 				"html": "BTS_M1.html",
 				"jsToUse": "BTS_M1_Skyscraper.js",
 				"frame2":{
@@ -52,7 +52,7 @@
 			"BTS_M1_300x600": {
 				"approved": false,
 				"backup": false,
-        "name": "BTS_M1_300x600",
+				"name": "BTS_M1_300x600",
 				"html": "BTS_M1.html",
 				"jsToUse": "BTS_M1_Skyscraper.js",
 				"outlineSvg": "outline_M1_300x600.svg",
@@ -69,7 +69,7 @@
 			"BTS_M1_728x90": {
 				"approved": false,
 				"backup": false,
-        "name": "BTS_M1_728x90",
+				"name": "BTS_M1_728x90",
 				"html": "BTS_M1_Leader.html",
 				"jsToUse": "BTS_M1_Leader.js",
 				"outlineSvg": "outline_M1_728x90.svg",
@@ -90,12 +90,47 @@
 				"redFill": "#4f132f",
 				"replayColor":"rgba(255,255,255,0.7)"
 			},
-			"BTS_M2_300x250": {
-        "name": "BTS_M2_300x250",
+			"BTS_M2_160x600": {
 				"approved": false,
 				"backup": false,
+				"name": "BTS_M2_160x600",
 				"html": "BTS_M2.html",
+				"jsToUse": "BTS_M2.js",
+				"headerSvg": "header_M2_160x600.svg",
+				"answerDropY": -225,
+				"frame2":{
+					"logo":{ "x":0, "y":-146, "scale":0.62},
+					"headerTxt": "Unhelpful things to<br>say to someone living<br>with depression:",
+					"txt":[
+						"Snap out of it",
+						"Push through it",
+						"But your life seems great",
+						"Everyone gets sad"
+					]
+				},
+				"frame3":{
+					"headerTxt": "Supportive things to<br>say to someone living<br>with depression:",
+					"txt":[
+						"I’m here for you",
+						"You’re not alone",
+						"How can I support you?",
+						"Talking to someone<br>could help"
+					]
+				},
+				"end": {
+					"logo":{ "y":-212, "scale":0.77 },
+					"txt": ["Ohio,", "challenge what", "you know about", "mental health."]
+				},
+				"width": 160, "height": 600
+			},
+			"BTS_M2_300x250": {
+				"approved": false,
+				"backup": false,
+				"name": "BTS_M2_300x250",
+				"html": "BTS_M2.html",
+				"jsToUse": "BTS_M2.js",
 				"_outlineSvg": "outline_M2_300x250.svg",
+				"answerDropY": -150,
 				"frame2":{
 					"logo":{ "x":0, "y":-88, "scale":0.5},
 					"headerTxt": "Unhelpful things to say to someone<br>living with depression:",
@@ -127,7 +162,7 @@
 				"replayColor":"rgba(255,255,255,0.7)"
 			},
 			"BTS_M3_300x250": {
-        "name": "BTS_M3_300x250",
+				"name": "BTS_M3_300x250",
 				"approved": false,
 				"backup": false,
 				"html": "BTS_M3.html",
@@ -159,7 +194,7 @@
 			"BTS_M3_300x600": {
 				"approved": false,
 				"backup": false,
-        "name": "BTS_M3_300x600",
+				"name": "BTS_M3_300x600",
 				"html": "BTS_M3.html",
 				"jsToUse": "BTS_M3_300x250.js",
 				"headerSvg":"header_M3_300x600.svg",
@@ -186,43 +221,12 @@
 			}
 		}
 	},
-			"BTS_M2_160x600": {
-				"html": "BTS_M2.html",
-				"approved": false,
-				"backup": false,
-        "name": "BTS_M2_160x600",
-				"jsToUse": "BTS_M2_Skyscraper.js",
-				"frame2":{
-					"h1MarginTop": 200,
-					"h1FontSize": 21,
-					"h1": ["ADDICTION IS:"],
-					"answerBackgroundSize": "200.9% 100%",
-					"answerBackgroundPosition": "99.9% bottom",
-					"list":[
-						"A character flaw",
-						"A lack of <br/><span class=\"line-indent\">willpower</span>",
-						"Impossible <span class=\"line-indent\">to overcome</span>",
-						"Highly treatable"
-					],
-					"strikeList":[
-						"A character flaw",
-						"A lack of </span><br/><span class=\"strikethrough line-indent\">willpower",
-						"Impossible </span><span class=\"strikethrough line-indent\">to overcome"
-					]
-				},
-				"end": {
-					"fontSize": 21,
-					"marginTop": 199,
-					"txt": ["CHALLENGE","WHAT YOU","KNOW ABOUT","ADDICTION."]
-				},
-				"width": 160, "height": 600
-			},
 
 			"BTS_M2_300x600": {
 				"html": "BTS_M2.html",
 				"approved": false,
 				"backup": false,
-        "name": "BTS_M2_300x600",
+				"name": "BTS_M2_300x600",
 				"jsToUse": "BTS_M2_Skyscraper.js",
 				"frame2":{
 					"h1Margin": "190px 0px 12px 20px",
@@ -256,7 +260,7 @@
 				"html": "BTS_M2_Leader.html",
 				"approved": false,
 				"backup": false,
-        "name": "cssToUse",
+				"name": "cssToUse",
 				"jsToUse": "BTS_M2_Leader.js",
 				"frame2":{
 					"h1": ["ADDICTION IS:"],
@@ -275,7 +279,7 @@
 				"html": "BTS_M2.html",
 				"approved": false,
 				"backup": false,
-        "name": "cssToUse",
+				"name": "cssToUse",
 				"jsToUse": "BTS_M2_Skyscraper.js",
 				"frame2":{
 					"h1MarginTop": 175,
@@ -307,7 +311,7 @@
 				"html": "BTS_M2_Leader.html",
 				"approved": false,
 				"backup": false,
-        "name": "cssToUse",
+				"name": "cssToUse",
 				"jsToUse": "BTS_M2_Leader.js",
 				"frame2":{
 					"h1": ["MENTAL HEALTH IS:"],

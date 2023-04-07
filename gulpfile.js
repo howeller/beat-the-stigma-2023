@@ -38,7 +38,7 @@ const b1 = ['english', 'Message1'],
 	b2 = ['english', 'Message2'],
 	b3 = ['english', 'Message3'];
 
-const currentGroup = b3,
+const currentGroup = b2,
 	isProduction = false;
 
 /*
@@ -81,6 +81,7 @@ function build(version, copyImages=false, showFpoNum=''){
 				getFpoName: function(){ return `FPO${showFpoNum}.jpg`;},	
 				showFpo: function(){ return showFpoNum; },
 				isLeader: function(){ return this.width >= 728 },
+				isSkyscraper: function(){ return this.height >= 600 },
 				letterCount: function(index){ return parseInt(index) + 7 }, // Returns int for line2 of letters
 				frameCount: function(index){ return parseInt(index) + 2 }, // Returns int frame# starting at 2
 				getLetterClass: function(scope, index){ return scope.group.frame2.hiddenLetters.includes(index) ? 'missing-letters': 'init-letters'; },
