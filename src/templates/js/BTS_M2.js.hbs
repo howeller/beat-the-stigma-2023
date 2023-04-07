@@ -7,15 +7,15 @@ function animate() {
 	var clipClosed = 'polygon(-120% 0%, 0% 0%, 0% 100%, -120% 100%)',
 		clipOpen = 'polygon(-120% 0%, 120% 0%, 120% 100%, -120% 100%)',
 		_path = id('outlinePath'),
-		_outlineRed = '#fe3131',
+		{{!_outlineRed = '#fe3131',}}
 		_outlineBlue = '#84bfe6';
 
 	// Init and set the width of the SVG path stroke. Needs to be fat enough to fill SVG shape
-	initSvgPath(_path, 2, _outlineRed);
+	initSvgPath(_path, {{borderStroke}}, '{{frame2.borderRed}}');
 
 	tl
 		.add('start')
-		// .set(_path, { fill:'{{group.redFill}}'})
+		// .set(_path, { fill:'{{frame2.redFill}}'})
 		.from('#banner', { autoAlpha:0, duration:0.3 },'start')
 		// .from('#bts-logo', { scale:0.5, transformOrigin:'50% 50%', alpha:0}, 'start')
 		// .from('#bg1', { scale:1.25, transformOrigin:'50% 50%', alpha:0}, '-=.25')
@@ -60,7 +60,6 @@ function animate() {
 		{{#if_eq (showFpo) '2'}}tl.pause('4');{{/if_eq~}}
 		{{#if_eq (showFpo) '3'}}tl.pause('10');{{/if_eq~}}
 		{{#if_eq (showFpo) '4'}}tl.pause('15');{{/if_eq~}}
-
 	;
 		console.log('Animation Runtime is ' + tl.endTime());
 }

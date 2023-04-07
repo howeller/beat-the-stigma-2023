@@ -88,6 +88,7 @@
 			"group":{
 				"blueFill": "rgba(7,1,51,0.5)",
 				"redFill": "#4f132f",
+				"fillOpacity": 0.7,
 				"replayColor":"rgba(255,255,255,0.7)"
 			},
 			"BTS_M2_160x600": {
@@ -98,8 +99,12 @@
 				"jsToUse": "BTS_M2.js",
 				"headerSvg": "header_M2_160x600.svg",
 				"answerDropY": -225,
+				"borderStroke": 2,
 				"frame2":{
 					"logo":{ "x":0, "y":-146, "scale":0.62},
+					"borderRed": "#fe3131",
+					"redFill": "#4f132f",
+					"fillOpacity": 0.7,
 					"headerTxt": "Unhelpful things to<br>say to someone living<br>with depression:",
 					"txt":[
 						"Snap out of it",
@@ -129,10 +134,13 @@
 				"name": "BTS_M2_300x250",
 				"html": "BTS_M2.html",
 				"jsToUse": "BTS_M2.js",
-				"_outlineSvg": "outline_M2_300x250.svg",
 				"answerDropY": -150,
+				"borderStroke": 2,
 				"frame2":{
 					"logo":{ "x":0, "y":-88, "scale":0.5},
+					"borderRed": "#fe3131",
+					"redFill": "#4f132f",
+					"fillOpacity": 0.7,
 					"headerTxt": "Unhelpful things to say to someone<br>living with depression:",
 					"txt":[
 						"Snap out of it",
@@ -155,6 +163,43 @@
 					"txt": ["Ohio, challenge what you know","about mental health."]
 				},
 				"width": 300, "height": 250
+			},
+			"BTS_M2_300x600": {
+				"approved": false,
+				"backup": false,
+				"name": "BTS_M2_300x600",
+				"html": "BTS_M2.html",
+				"jsToUse": "BTS_M2.js",
+				"headerSvg": "header_M2_300x600.svg",
+				"answerDropY": -250,
+				"borderStroke": 3,
+				"frame2":{
+					"logo":{ "x":0, "y":-145, "scale":0.44},
+					"borderRed": "#ed2024",
+					"redFill": "#4b132f",
+					"fillOpacity": 0.9,
+					"headerTxt": "Unhelpful things to<br>say to someone living<br>with depression:",
+					"txt":[
+						"Snap out of it",
+						"Push through it",
+						"But your life seems great",
+						"Everyone gets sad"
+					]
+				},
+				"frame3":{
+					"headerTxt": "Supportive things to<br>say to someone living<br>with depression:",
+					"txt":[
+						"I’m here for you",
+						"You’re not alone",
+						"How can I support you?",
+						"Talking to someone could help"
+					]
+				},
+				"end": {
+					"logo":{ "y":-200, "scale":0.55 },
+					"txt": ["Ohio, challenge", "what you know about", "mental health."]
+				},
+				"width": 300, "height": 600
 			}
 		},
 		"Message3":{
