@@ -136,25 +136,53 @@
 				"f2Logo":{ 
 					"x":0, "y":50, "scale":0.4
 				},
-				"frames": [
-					{"txt": "Someone tells you they’ve been living <br>with anxiety or depression. You say..."},
-					{"txt": "I’m here for you."},
-					{"txt": "You’re not alone."}
+				"frames":[
+					{
+						"pic": "pic2_2x.jpg",
+						"txt": "Someone tells you they’ve been living <br>with anxiety or depression. You say..."
+					},
+					{
+						"pic": "pic3_2x.jpg",
+						"txt": "I’m here for you."
+					},
+					{
+						"pic": "pic4_2x.jpg",
+						"txt": "You’re not alone."
+					}
 				],
-				"_frame2":{
-					"txt": "Someone tells you they’ve been living <br>with anxiety or depression. You say..."
-				},
-				"_frame3":{
-					"txt": "I’m here for you."
-				},
-				"_frame4":{
-					"txt": "You’re not alone."
-				},
 				"end": {
 					"logo":{ "y":-78, "scale": 0.5},
 					"txt": "Ohio, challenge what you know<br>about mental health."
 				},
 				"width": 300, "height": 250
+			},
+			"BTS_M3_300x600": {
+				"approved": false,
+				"backup": false,
+        "name": "BTS_M3_300x600",
+				"html": "BTS_M3.html",
+				"jsToUse": "BTS_M3_300x250.js",
+				"headerSvg":"header_M3_300x600.svg",
+				"f2Logo":{ "x":0, "y":209, "scale":0.43 },
+				"frames":[
+					{
+						"pic": "pic2_2x.jpg",
+						"txt": "Someone tells you they’ve <br>been living with anxiety<br>or depression. You say..."
+					},
+					{
+						"pic": "pic3_2x.jpg",
+						"txt": "I’m here for you."
+					},
+					{
+						"pic": "pic4_2x.jpg",
+						"txt": "You’re not alone."
+					}
+				],
+				"end": {
+					"logo":{ "y":-199, "scale": 0.53},
+					"txt": "Ohio, challenge<br>what you knowabout <br>mental health."
+				},
+				"width": 300, "height": 600
 			}
 		}
 	},
@@ -273,40 +301,6 @@
 					"txt": ["CHALLENGE","WHAT YOU","KNOW","ABOUT","MENTAL","HEALTH."]
 				},
 				"width": 160, "height": 600
-			},
-			"BTS_M3_300x600": {
-				"cssToUse": "BTS_M2_300x600.css",
-				"html": "BTS_M3.html",
-				"approved": false,
-				"backup": false,
-        "name": "cssToUse",
-				"jsToUse": "BTS_M2_Skyscraper.js",
-				"frame2":{
-					"h1Margin": "157px 0px 18px 28px",
-					"h1": ["MENTAL", "HEALTH IS:"],
-					"listFontSize": 25,
-					"listLineHeight": 29,
-					"listMargin": "2px 0px 0px 22px",
-					"answerMarginLeft": 22,
-					"strikeWidth": "calc(100% + 45px)",
-					"strikeMargin": "0px -35px",
-					"list":[
-						"A sign of weakness",
-						"Something <span class=\"line-indent\">you can control</span>",
-						"Unimportant",
-						"Health"
-					],
-					"strikeList":[
-						"A sign of weakness",
-						"Something </span><span class=\"strikethrough line-indent\">you can control",
-						"Unimportant"
-					]
-				},
-				"end": {
-					"margin": "120px 0px 18px 28px",
-					"txt": ["CHALLENGE","WHAT YOU","KNOW ABOUT","MENTAL","HEALTH."]
-				},
-				"width": 300, "height": 600
 			},
 			"BTS_M3_728x90": {
 				"cssToUse": "BTS_M2_Leader.css",

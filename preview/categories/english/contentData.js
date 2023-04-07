@@ -95,6 +95,18 @@ var objData = {
 							dload: true,
 							backup: false,
 							manualzip: true
+						},
+						{
+							overwriteSizeDisplay: "", 
+							label: "BTS_M3_300x600",
+							src: "BTS_M3_300x600",
+							w: 300,
+							h: 600,
+							type: "html5",
+							approved: false,
+							dload: true,
+							backup: false,
+							manualzip: true
 						}
 					]
 				}			]
