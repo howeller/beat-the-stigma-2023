@@ -20,9 +20,17 @@
 		</ol>
 			<!-- Duplicate list of strike throughs -->
 		<ol id="g1-wrong-answers" class="game-txt" type="A" aria-hidden="true">
+			{{#if frame2.strikeList}}
+			{{#each frame2.strikeList}}
+			<li><span class="strike-wrapper">
+				<span class="strikethrough">{{{.}}}</span>
+			</span></li>
+			{{/each}}
+			{{else}}
 			{{#each frame2.txt}}
 			<li><span class="strikethrough">{{{.}}}</span></li>
 			{{/each}}
+			{{/if}}
 		</ol>
 	</div>
 	
@@ -38,11 +46,11 @@
 	</div>
 </div>
 
-{{#if (isSkyscraper)}}
+{{#unless (isBox)}}
 {{#unless (showFpo)}}
 <img id="end-bg" class="full-size" src="images/bg3_2x.jpg" alt=""/>
 {{/unless}}
-{{/if}}
+{{/unless}}
 <div id="end-container" class="full-size">
 	<p id="end-txt">
 		{{#each end.txt}}

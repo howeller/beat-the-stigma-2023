@@ -82,6 +82,7 @@ function build(version, copyImages=false, showFpoNum=''){
 				showFpo: function(){ return showFpoNum; },
 				isLeader: function(){ return this.width >= 728 },
 				isSkyscraper: function(){ return this.height >= 600 },
+				isBox: function(){ return this.width == 300 && this.height == 250 },
 				letterCount: function(index){ return parseInt(index) + 7 }, // Returns int for line2 of letters
 				frameCount: function(index){ return parseInt(index) + 2 }, // Returns int frame# starting at 2
 				getLetterClass: function(scope, index){ return scope.group.frame2.hiddenLetters.includes(index) ? 'missing-letters': 'init-letters'; },

@@ -100,6 +100,18 @@ var objData = {
 							dload: true,
 							backup: false,
 							manualzip: true
+						},
+						{
+							overwriteSizeDisplay: "", 
+							label: "BTS_M2_728x90",
+							src: "BTS_M2_728x90",
+							w: 728,
+							h: 90,
+							type: "html5",
+							approved: false,
+							dload: true,
+							backup: false,
+							manualzip: true
 						}
 					]
 				},

@@ -87,8 +87,8 @@
 		"Message2":{
 			"group":{
 				"blueFill": "rgba(7,1,51,0.5)",
-				"redFill": "#4f132f",
-				"fillOpacity": 0.7,
+				"_redFill": "#4f132f",
+				"_fillOpacity": 0.7,
 				"replayColor":"rgba(255,255,255,0.7)"
 			},
 			"BTS_M2_160x600": {
@@ -200,6 +200,49 @@
 					"txt": ["Ohio, challenge", "what you know about", "mental health."]
 				},
 				"width": 300, "height": 600
+			},
+			"BTS_M2_728x90": {
+				"approved": false,
+				"backup": false,
+				"name": "BTS_M2_728x90",
+				"html": "BTS_M2.html",
+				"jsToUse": "BTS_M2.js",
+				"headerSvg": "header_M2_728x90.svg",
+				"answerDropY": -90,
+				"borderStroke": 2,
+				"frame2":{
+					"logo":{ "x":-242, "y":-16, "scale":0.46},
+					"borderRed": "#fe3131",
+					"redFill": "#4f132f",
+					"fillOpacity": 0.7,
+					"headerTxt": "Unhelpful things to say to<br>someone living with depression:",
+					"txt":[
+						"Snap out of it",
+						"Push through it",
+						"But your life<br>seems great",
+						"Everyone<br>gets sad"
+					],
+					"strikeList":[
+						"Snap out of it",
+						"Push through it",
+						"But your life</span><br><span class=\"strikethrough\">seems great",
+						"Everyone</span><br><span class=\"strikethrough\">gets sad"
+					]
+				},
+				"frame3":{
+					"headerTxt": "Supportive things to say to someone living with depression:",
+					"txt":[
+						"I’m here<br>for you",
+						"You’re not alone",
+						"How can I<br>support you?",
+						"Talking to<br>someone<br>could help"
+					]
+				},
+				"end": {
+					"logo":{ "y":0, "scale": 0.01},
+					"txt": ["Ohio, challenge what you know about mental health."]
+				},
+				"width": 728, "height": 90
 			}
 		},
 		"Message3":{

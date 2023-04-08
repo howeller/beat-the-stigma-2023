@@ -394,8 +394,6 @@
 					// .from('#g1-answers li', { x:-300, duration:0.3, stagger:.05}, 'list1In')
 					.fromTo('#g1-wrong-answers li', {clipPath: clipClosed}, {clipPath: clipOpen, duration:0.8, stagger:0}, 'list1In+=1.5')
 					.add('f2Out','+=2.5')
-					// .to('#g1-answers li', {y:150, duration:0.3, stagger:.05}, 'f2Out')
-					// .to('#g1-wrong-answers li', {y:150, duration:0.3, stagger:.05}, 'f2Out')
 					.to('#g1-answers li', {x:300, duration:0.3, stagger:.05}, 'f2Out')
 					.to('#g1-wrong-answers li', {x:300, duration:0.3, stagger:.05}, 'f2Out')
 					.to(['#question1', '#red-overlay'], {alpha:0}, 'f2Out')

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="ad.size" content="width=300,height=250">
+	<meta name="ad.size" content="width=728,height=90">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-	<title>BTS_M2_300x250</title>
+	<title>BTS_M2_728x90</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet"> 
@@ -76,8 +76,8 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 300px;
-			height: 250px;
+			width: 728px;
+			height: 90px;
 		}
 		
 		#banner {
@@ -145,52 +145,64 @@
 		/* Frame1 */
 		
 		#bts-logo {
-			width: 153px;
-			margin: 102px auto 0;
-			position: relative;
+			width: 148px;
+		  top: 22px;
+		  left: 291px;
 		}
+		
 		.bg-blend {
-		  /* background-image: url(images/bg2_2x.jpg); */
-		  background-color: rgba(255, 7, 7, 0.5);
-		  background-blend-mode: color;
+			background-color: rgba(255, 7, 7, 0.5);
+			background-blend-mode: color;
 		}
 		
 		.game-wrapper, svg#header-back  {
-			margin: 25px 24px;
-			width: 251px;
-		}
-		.game-wrapper{
 		}
 		
 		svg#header-back {
+			width: 223px;
 			height: auto;
-			overflow: visible;}
+			overflow: visible;
+			margin: 18px 12px 0;}
+		
+		.game-wrapper {
+		  width: 100%;
+		  height: 90px;
+		}
+		
 		.game-txt {
-			font-size: 11px;
-			line-height: 1.1 ;}
+			font-size: 14px;
+			line-height: 15px;
+		  /* letter-spacing: -1px; */}
 		p.header-txt {
-			margin-top: 24px;
+		  display: inline-block;
+		  position: absolute;
+			width: 223px;
+		  left: 12px;
+		  top: 38px;
 		}
 		
 		ol {
-			display: block;
+			display: flex;
+		  flex-direction: row;
 			position: absolute;
-			overflow: hidden;
+			/* overflow: hidden; */
 			width: 100%;
-			margin-top: 17px;
+		  top: 25px;
+		  left: 241px;
+			/* margin-top: 1px; */
 		}
 		
 		li {
-			width: 100%;
-			height: 30px;
+			width: 113px;
+			height: 58px;
 			border-radius: 3px;
 			box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
-			display: flex;
+			display: inline-flex;
 			align-items: center;
-			margin-bottom: 5px;
-			padding-left: 7px;
+			justify-content: center;
+			margin-right: 7px;
 		}
 		
 		#game1-wrapper li {
@@ -201,18 +213,23 @@
 		}
 		
 		#g1-answers li {
-			background-color: rgba(79, 19, 47, 0.7);
+			background-color: rgba(75, 19, 47, 0.7);
+			/* background-color: rgba(79, 19, 47, 0.7); */
 		}
 		#g2-answers li {
 			background-color: rgba(7,1,51,0.5);
 		}
 		#g1-wrong-answers li span.strikethrough {
 			position: relative;
-			display: inline-block;
+		}
+		
+		span.strike-wrapper {
+		  display: inline-block;
 		}
 		
 		#g1-wrong-answers li span.strikethrough::after {
 			position: absolute;
+		  /* display: block; */
 			border-top: 1px solid white;
 			background-color: white;
 			content: ' ';
@@ -224,27 +241,38 @@
 		
 		/* Endframe */
 		
-		#end-container * {
+		#end-container  * {
 			position: relative !important;
-			display: block;
+		}
+		
+		#end-container  {
+			/* position: relative !important; */
+			display: flex;
+		  align-items: center;
+		  /* justify-content: center; */
+		  flex-direction: row;
 		}
 		
 		#end-txt{
-			font-size: 17px;
-			line-height: 18px;
-			margin-top: 96px;
+			font-size: 19px;
+			line-height: 12px;
+		  text-align: left;
+		  letter-spacing: -0.2px;
+			/* margin: 0 56px 30px; */
+		  margin-left: 56px;
+		  margin-right: 33px;
 		}
 		
 		#cta {
 			background-color: var(--teal);
-			border-radius: 5px;
+			border-radius: 4px;
 			color: white;
-			display: flex;
+			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			margin: 17px auto 0;
-			padding: 3px 7px;
-			font-size: 15px;
+			margin-right: 40px;
+			padding: 3px 10px;
+			font-size: 13px;
 			letter-spacing: -0.5px;
 		}
 		
@@ -254,8 +282,7 @@
 		}
 		
 		svg#ohio-logo{
-			width: 28px;
-			margin: 20px auto;
+			width: 37px;
 		}	</style>
 </head>
 
@@ -270,43 +297,50 @@
 			<img id="bg2" class="full-size" src="images/bg2_2x.jpg" alt=""/>
 			<div id="red-overlay" class="bg-blend full-size"></div>
 				
-				<svg id="header-back" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 250.7 59.5" viewBox="0 0 250.7 59.5"><path id="outlinePath" d="M165.7 1h13.6c1.7 0 3.2 1.2 4.1 3.1l2.9 6.2c.9 1.9 2.5 3.1 4.1 3.1h55.8c1.9 0 3.4 1.5 3.4 3.4v38.5c0 1.9-1.5 3.4-3.4 3.4h-121 .1H4.4C2.5 58.5 1 57 1 55.1V16.7c0-1.9 1.5-3.4 3.4-3.4h55.8c1.7 0 3.2-1.2 4.1-3.1L67.2 4c1-1.8 2.5-3 4.2-3H85" style="fill:#4f132f;fill-opacity:0.7;stroke:#fe3131;stroke-width:2;stroke-miterlimit:10"/></svg>
-			<div id="game1-wrapper" class="abs game-txt game-wrapper">
+				<svg id="header-back" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 179.7 50.5" viewBox="0 0 179.7 50.5"><path id="outlinePath" d="M120.7 0h4.6c6.5.2 7 3.2 7 3.2.9 1.9 2.4 3 4.1 3.1h39.8c1.9 0 3.4 1.5 3.4 3.4v37.5c0 1.9-1.5 3.4-3.4 3.4h-84 .1-89C1.5 50.5 0 49 0 47.1V9.7c0-1.9 1.5-3.4 3.4-3.4h39.8c1.7 0 3.2-1.2 4.1-3.1 0 0 1-3.2 7-3.2H60" style="fill:#4f132f;fill-opacity:0.7;stroke:#fe3131;stroke-width:2;stroke-miterlimit:10"/></svg>	<div id="game1-wrapper" class="abs game-txt game-wrapper">
 				<p id="question1" class="header-txt">
-					Unhelpful things to say to someone<br>living with depression:
+					Unhelpful things to say to<br>someone living with depression:
 				</p>
 				<ol id="g1-answers" class="game-txt" type="A">
 					<li>Snap out of it</li>
 					<li>Push through it</li>
-					<li>But your life seems great</li>
-					<li>Everyone gets sad</li>
+					<li>But your life<br>seems great</li>
+					<li>Everyone<br>gets sad</li>
 				</ol>
 					<!-- Duplicate list of strike throughs -->
 				<ol id="g1-wrong-answers" class="game-txt" type="A" aria-hidden="true">
-					<li><span class="strikethrough">Snap out of it</span></li>
-					<li><span class="strikethrough">Push through it</span></li>
-					<li><span class="strikethrough">But your life seems great</span></li>
-					<li><span class="strikethrough">Everyone gets sad</span></li>
+					<li><span class="strike-wrapper">
+						<span class="strikethrough">Snap out of it</span>
+					</span></li>
+					<li><span class="strike-wrapper">
+						<span class="strikethrough">Push through it</span>
+					</span></li>
+					<li><span class="strike-wrapper">
+						<span class="strikethrough">But your life</span><br><span class="strikethrough">seems great</span>
+					</span></li>
+					<li><span class="strike-wrapper">
+						<span class="strikethrough">Everyone</span><br><span class="strikethrough">gets sad</span>
+					</span></li>
 				</ol>
 			</div>
 			
 			<div id="game2-wrapper" class="abs game-txt game-wrapper">
 				<p id="question2" class="header-txt">
-					Supportive things to say to someone<br>living with depression:
+					Supportive things to say to someone living with depression:
 				</p>
 				<ol id="g2-answers" class="game-txt" type="A">
-					<li>I’m here for you</li>
+					<li>I’m here<br>for you</li>
 					<li>You’re not alone</li>
-					<li>How can I support you?</li>
-					<li>Talking to someone could help</li>
+					<li>How can I<br>support you?</li>
+					<li>Talking to<br>someone<br>could help</li>
 				</ol>
 			</div>
 		</div>
 		
+		<img id="end-bg" class="full-size" src="images/bg3_2x.jpg" alt=""/>
 		<div id="end-container" class="full-size">
 			<p id="end-txt">
-				Ohio, challenge what you know<br/>
-				about mental health.	</p>
+				Ohio, challenge what you know about mental health.	</p>
 			<button id="cta" tabindex="0" aria-label="LEARN MORE">
 				<span id="cta-txt">LEARN MORE</span>
 			</button>
@@ -366,7 +400,7 @@
 			}
 			
 			function animate() {
-				// cl('BTS_M2_300x250');
+				// cl('BTS_M2_728x90');
 				tl = gsap.timeline({ defaults:{ duration:0.3 }});
 			
 				var clipClosed = 'polygon(-120% 0%, 0% 0%, 0% 100%, -120% 100%)',
@@ -384,28 +418,28 @@
 					// .from('#bts-logo', { scale:0.5, transformOrigin:'50% 50%', alpha:0}, 'start')
 					// .from('#bg1', { scale:1.25, transformOrigin:'50% 50%', alpha:0}, '-=.25')
 					.add('f2','+=.8' )
-					.to('#bts-logo',{ scale: 0.5, y:-88, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
+					.to('#bts-logo',{ scale: 0.46, x:-242, y:-16, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
 					.add(writeInSvgTl(_path, 0.5), 'f2+=.2')
 					.from(['#bg2', '#red-overlay'], {alpha:0}, 'f2+=.2')
 					.from([_path], {'fill-opacity':0, ease:'power3.in'}, 'f2+=.2')
 					.from('#question1', {alpha:0}, '-=.3')
 					.add('list1In', '+=.5')
-					.from('#g1-answers li', { y:-150, duration:0.3, stagger:.05}, 'list1In')
-					// .from('#g1-answers li', { x:-300, duration:0.3, stagger:.05}, 'list1In')
+					.from('#g1-answers li', { y:-90, duration:0.3, stagger:.05}, 'list1In')
+					// .from('#g1-answers li', { x:-728, duration:0.3, stagger:.05}, 'list1In')
 					.fromTo('#g1-wrong-answers li', {clipPath: clipClosed}, {clipPath: clipOpen, duration:0.8, stagger:0}, 'list1In+=1.5')
 					.add('f2Out','+=2.5')
-					.to('#g1-answers li', {x:300, duration:0.3, stagger:.05}, 'f2Out')
-					.to('#g1-wrong-answers li', {x:300, duration:0.3, stagger:.05}, 'f2Out')
+					.to('#g1-answers li', {y:90, duration:0.3, stagger:.05}, 'f2Out')
+					.to('#g1-wrong-answers li', {y:90, duration:0.3, stagger:.05}, 'f2Out')
 					.to(['#question1', '#red-overlay'], {alpha:0}, 'f2Out')
 					.add('f3', '-=.5')
 					.to(_path, {'fill':'rgba(7,1,51,0.5)', 'fill-opacity':1, stroke:_outlineBlue}, 'f3')
 					.from('#question2', {alpha:0}, 'f3')
 					.add('list2In', 'f3+=.3')
-					.from('#g2-answers li', { y:-150, duration:0.3, stagger:.05}, 'list2In')
-					// .from('#g2-answers li', { x:-300, duration:0.3, stagger:.1}, 'list2In')
+					.from('#g2-answers li', { y:-90, duration:0.3, stagger:.05}, 'list2In')
+					// .from('#g2-answers li', { x:-728, duration:0.3, stagger:.1}, 'list2In')
 					.add('f3Out','+=4.75	')
-					.to(['#f2-container'], {alpha:0}, 'f3Out')
-					.to('#bts-logo',{ y:-78, transformOrigin:'50% 0%', ease:'power3.out' }, 'f3Out')
+					.from(['#end-bg'], {alpha:0}, 'f3Out')
+					.to('#bts-logo',{ scale:0.01, y:0, transformOrigin:'50% 0%', ease:'power3.out' }, 'f3Out')
 					.add('end')
 					.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.5 }, 'end')
 					.add(initReplayAction)
