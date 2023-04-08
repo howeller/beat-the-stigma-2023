@@ -38,7 +38,7 @@ const b1 = ['english', 'Message1'],
 	b2 = ['english', 'Message2'],
 	b3 = ['english', 'Message3'];
 
-const currentGroup = b2,
+const currentGroup = b3,
 	isProduction = false;
 
 /*

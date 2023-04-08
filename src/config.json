@@ -249,6 +249,34 @@
 			"group":{
 				"replayColor":"rgba(255,255,255,0.7)"
 			},
+			"BTS_M3_160x600": {
+				"approved": false,
+				"backup": false,
+				"name": "BTS_M3_160x600",
+				"html": "BTS_M3.html",
+				"jsToUse": "BTS_M3_300x250.js",
+				"headerSvg":"header_M3_160x600.svg",
+				"f2Logo":{ "x":0, "y":198, "scale":0.6 },
+				"frames":[
+					{
+						"pic": "pic2_2x.jpg",
+						"txt": "Someone tells you <br>they’ve been living<br>with anxiety or <br>depression. You say..."
+					},
+					{
+						"pic": "pic3_2x.jpg",
+						"txt": "I’m here for you."
+					},
+					{
+						"pic": "pic4_2x.jpg",
+						"txt": "You’re not alone."
+					}
+				],
+				"end": {
+					"logo":{ "y":-212, "scale":0.77 },
+					"txt": "Ohio,<br>challenge what<br>you know about<br>mental health."
+				},
+				"width": 160, "height": 600
+			},
 			"BTS_M3_300x250": {
 				"name": "BTS_M3_300x250",
 				"approved": false,
@@ -303,113 +331,38 @@
 				],
 				"end": {
 					"logo":{ "y":-199, "scale": 0.53},
-					"txt": "Ohio, challenge<br>what you knowabout <br>mental health."
+					"txt": "Ohio, challenge<br>what you know about <br>mental health."
 				},
 				"width": 300, "height": 600
-			}
-		}
-	},
-
-			"BTS_M2_300x600": {
-				"html": "BTS_M2.html",
-				"approved": false,
-				"backup": false,
-				"name": "BTS_M2_300x600",
-				"jsToUse": "BTS_M2_Skyscraper.js",
-				"frame2":{
-					"h1Margin": "190px 0px 12px 20px",
-					"h1": ["ADDICTION IS:"],
-					"listFontSize": 22,
-					"listLineHeight":26,
-					"listMargin": "2px 0px 0px 14px",
-					"answerMarginLeft":14,
-					"strikeWidth": "calc(100% + 40px)",
-					"strikeMargin": "0px -30px",
-					"list":[
-						"A character flaw",
-						"A lack of willpower",
-						"Impossible to overcome",
-						"Highly treatable"
-					],
-					"strikeList":[
-						"A character flaw",
-						"A lack of willpower",
-						"Impossible to overcome"
-					]
-				},
-				"end": {
-					"margin": "142px 0px 32px 28px",
-					"txt": ["CHALLENGE","WHAT YOU","KNOW ABOUT","ADDICTION."]
-				},
-				"width": 300, "height": 600
-			},
-			"BTS_M2_728x90": {
-				"cssToUse": "BTS_M2_Leader.css",
-				"html": "BTS_M2_Leader.html",
-				"approved": false,
-				"backup": false,
-				"name": "cssToUse",
-				"jsToUse": "BTS_M2_Leader.js",
-				"frame2":{
-					"h1": ["ADDICTION IS:"],
-					"listMargin": 6,
-					"list":["A character flaw A lack of willpower", "Impossible to overcome", "Highly treatable"]
-					
-				},
-				"end": {
-					"margin": 42,
-					"txt": ["CHALLENGE WHAT YOU","KNOW ABOUT ADDICTION."]
-				},
-				"width": 728, "height": 90
-			},
-			"BTS_M3_160x600": {
-				"cssToUse": "BTS_M2_160x600.css",
-				"html": "BTS_M2.html",
-				"approved": false,
-				"backup": false,
-				"name": "cssToUse",
-				"jsToUse": "BTS_M2_Skyscraper.js",
-				"frame2":{
-					"h1MarginTop": 175,
-					"h1FontSize": 25,
-					"h1": ["MENTAL", "HEALTH IS:"],
-					"answerBackgroundSize": "201% 100%",
-					"answerBackgroundPosition": "100% bottom",
-					"list":[
-						"A sign of <br/><span class=\"line-indent\">weakness</span>",
-						"Something<br/><span class=\"line-indent\">you can control</span>",
-						"Unimportant",
-						"Health"
-					],
-					"strikeList":[
-						"A sign of </span><br/><span class=\"strikethrough line-indent\">weakness",
-						"Something </span><br/><span class=\"strikethrough line-indent\">you can control",
-						"Unimportant"
-					]
-				},
-				"end": {
-					"fontSize": 25,
-					"marginTop": 165,
-					"txt": ["CHALLENGE","WHAT YOU","KNOW","ABOUT","MENTAL","HEALTH."]
-				},
-				"width": 160, "height": 600
 			},
 			"BTS_M3_728x90": {
-				"cssToUse": "BTS_M2_Leader.css",
-				"html": "BTS_M2_Leader.html",
 				"approved": false,
 				"backup": false,
-				"name": "cssToUse",
-				"jsToUse": "BTS_M2_Leader.js",
-				"frame2":{
-					"h1": ["MENTAL HEALTH IS:"],
-					"listMargin": 5,
-					"list":["A sign of weakness", "Something you can control", "Unimportant", "Health"]
-				},
+				"name": "BTS_M3_728x90",
+				"html": "BTS_M3.html",
+				"jsToUse": "BTS_M3_300x250.js",
+				"headerSvg":"header_M3_728x90.svg",
+				"f2Logo":{ "x":184, "y":-16, "scale":0.46},
+				"frames":[
+					{
+						"pic": "pic2_2x.jpg",
+						"txt": "Someone tells you they’ve been living<br>with anxiety or depression. You say..."
+					},
+					{
+						"pic": "pic3_2x.jpg",
+						"txt": "I’m here for you."
+					},
+					{
+						"pic": "pic4_2x.jpg",
+						"txt": "You’re not alone."
+					}
+				],
 				"end": {
-					"margin": 24,
-					"txt": ["CHALLENGE WHAT YOU KNOW","ABOUT MENTAL HEALTH."]
+					"logo":{ "y":0, "scale": 0.01},
+					"txt": "Ohio, challenge what you know about mental health."
 				},
 				"width": 728, "height": 90
 			}
+		}
+	}
 }	

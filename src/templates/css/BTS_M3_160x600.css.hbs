@@ -1,0 +1,78 @@
+#banner * {
+	font-weight: 700;
+	text-align: center;
+}
+
+/* Frame1 */
+
+img#bts-logo {
+	width: 112px;
+	margin: 283px auto 0;
+	position: relative;
+}
+
+.game-wrapper {
+	margin: 490px 5px 0;
+	width: 150px;
+	overflow: visible;
+}
+
+svg#header-back {
+	width: 100%;
+	height: auto;
+	overflow: visible;
+	{{~#if (showFpo)}}opacity:0.6;{{/if~}}
+}
+.game-txt {
+	font-size: 13px;
+	line-height: 14px;
+	/* letter-spacing: -.1px; */
+	{{~#if (showFpo)}}color: red !important;{{/if~}}
+}
+
+#txt-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 86px;
+	margin-top: 8px;
+}
+
+/* Endframe */
+
+#end-wrapper * {
+	position: relative !important;
+	display: block;
+}
+
+#end-txt{
+	font-size: 19px;
+	line-height: 20px;
+	margin-top: 230px;
+	{{~#if (showFpo)}}color: red;{{/if}}
+}
+
+#cta {
+	background-color: var(--teal);
+	border-radius: 3px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 22px auto 0;
+	padding: 3px 9px;
+	font-size: 16px;
+	letter-spacing: -0.5px;
+	{{~#if (showFpo)}}visibility: visible;background-color: rgba(255, 0, 0, 0.4); color:red{{/if}}
+}
+
+#cta-txt {
+	white-space: nowrap;
+	width: auto;
+}
+
+svg#ohio-logo{
+	width: 34px;
+	margin: 134px auto 0;
+}

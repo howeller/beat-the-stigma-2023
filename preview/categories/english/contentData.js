@@ -122,6 +122,18 @@ var objData = {
 ,
 						{
 							overwriteSizeDisplay: "", 
+							label: "BTS_M3_160x600",
+							src: "BTS_M3_160x600",
+							w: 160,
+							h: 600,
+							type: "html5",
+							approved: false,
+							dload: true,
+							backup: false,
+							manualzip: true
+						},
+						{
+							overwriteSizeDisplay: "", 
 							label: "BTS_M3_300x250",
 							src: "BTS_M3_300x250",
 							w: 300,
@@ -138,6 +150,18 @@ var objData = {
 							src: "BTS_M3_300x600",
 							w: 300,
 							h: 600,
+							type: "html5",
+							approved: false,
+							dload: true,
+							backup: false,
+							manualzip: true
+						},
+						{
+							overwriteSizeDisplay: "", 
+							label: "BTS_M3_728x90",
+							src: "BTS_M3_728x90",
+							w: 728,
+							h: 90,
 							type: "html5",
 							approved: false,
 							dload: true,
