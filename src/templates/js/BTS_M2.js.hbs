@@ -14,7 +14,7 @@ function animate() {
 
 	tl
 		.add('start')
-		// .set(_path, { fill:'{{frame2.redFill}}'})
+		{{!--// .set(_path, { fill:'{{frame2.redFill}}'}) --}}
 		.from('#banner', { autoAlpha:0, duration:0.3 },'start')
 		// .from('#bts-logo', { scale:0.5, transformOrigin:'50% 50%', alpha:0}, 'start')
 		// .from('#bg1', { scale:1.25, transformOrigin:'50% 50%', alpha:0}, '-=.25')
@@ -24,11 +24,11 @@ function animate() {
 		.from(['#bg2', '#red-overlay'], {alpha:0}, 'f2+=.2')
 		.from([_path], {'fill-opacity':0, ease:'power3.in'}, 'f2+=.2')
 		.from('#question1', {alpha:0}, '-=.3')
-		.add('list1In', '+=.5')
+		.add('list1In', '+=.6')
 		.from('#g1-answers li', { y:{{answerDropY}}, duration:0.3, stagger:.05}, 'list1In')
 		// .from('#g1-answers li', { x:-{{width}}, duration:0.3, stagger:.05}, 'list1In')
-		.fromTo('#g1-wrong-answers li', {clipPath: clipClosed}, {clipPath: clipOpen, duration:0.8, stagger:0}, 'list1In+=1.5')
-		.add('f2Out','+=2.5')
+		.fromTo('#g1-wrong-answers li', {clipPath: clipClosed}, {clipPath: clipOpen, duration:0.8, stagger:0}, 'list1In+=3')
+		.add('f2Out','+=1')
 		{{#if (isLeader)}}
 		.to('#g1-answers li', {y:{{height}}, duration:0.3, stagger:.05}, 'f2Out')
 		.to('#g1-wrong-answers li', {y:{{height}}, duration:0.3, stagger:.05}, 'f2Out')
@@ -43,7 +43,7 @@ function animate() {
 		.add('list2In', 'f3+=.3')
 		.from('#g2-answers li', { y:{{answerDropY}}, duration:0.3, stagger:.05}, 'list2In')
 		// .from('#g2-answers li', { x:-{{width}}, duration:0.3, stagger:.1}, 'list2In')
-		.add('f3Out','+=4.75	')
+		.add('f3Out','+=5	')
 		{{#if (isBox)}}
 		.to(['#f2-container'], {alpha:0}, 'f3Out')
 		{{else}}
