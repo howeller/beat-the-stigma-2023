@@ -62,7 +62,7 @@ var objData = {
 					folderName: "html",
 					title: "Message2 - HTML Standard Media",
 					bannerList: [
-						{
+						/* {
 							overwriteSizeDisplay: "", 
 							label: "BTS_M2_160x600",
 							src: "BTS_M2_160x600",
@@ -73,7 +73,7 @@ var objData = {
 							dload: true,
 							backup: false,
 							manualzip: true
-						},
+						}, */
 						{
 							overwriteSizeDisplay: "", 
 							label: "BTS_M2_300x250",
@@ -85,7 +85,7 @@ var objData = {
 							dload: true,
 							backup: false,
 							manualzip: true
-						},
+						}/* ,
 						{
 							overwriteSizeDisplay: "", 
 							label: "BTS_M2_300x600",
@@ -109,7 +109,7 @@ var objData = {
 							dload: true,
 							backup: false,
 							manualzip: true
-						}
+						} */
 					]
 				},
         {	
