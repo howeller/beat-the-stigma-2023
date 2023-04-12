@@ -4,12 +4,10 @@ var objData = {
 		{
 			folderName: "build",
 			title: "HTML Banners",
-			folderList: [
-        {	
+			folderList: [        {	
 					folderName: "html",
 					title: "Message1 - HTML Standard Media",
 					bannerList: [
-,
 						{
 							overwriteSizeDisplay: "", 
 							label: "BTS_M1_160x600",
@@ -64,7 +62,6 @@ var objData = {
 					folderName: "html",
 					title: "Message2 - HTML Standard Media",
 					bannerList: [
-,
 						{
 							overwriteSizeDisplay: "", 
 							label: "BTS_M2_160x600",
@@ -119,7 +116,6 @@ var objData = {
 					folderName: "html",
 					title: "Message3 - HTML Standard Media",
 					bannerList: [
-,
 						{
 							overwriteSizeDisplay: "", 
 							label: "BTS_M3_160x600",
@@ -169,7 +165,8 @@ var objData = {
 							manualzip: true
 						}
 					]
-				}			]
+				}
+			]
 		}, 
 	]
 }

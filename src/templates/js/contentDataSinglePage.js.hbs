@@ -5,13 +5,13 @@ var objData = {
 			folderName: "build",
 			title: "{{global.previewTitle}}",
 			folderList: [
-				{{#each this.english}}
+				{{~#each this.english}}
         {	
 					folderName: "html",
 					title: "{{@key}} - HTML Standard Media",
 					bannerList: [
             {{#each this}}
-            {{#unless @first}}
+            {{~#unless @first}}
 						{
 							overwriteSizeDisplay: "", 
 							label: "{{name}}",{{log name}}
@@ -23,11 +23,12 @@ var objData = {
 							dload: true,
 							backup: false,
 							manualzip: true
-						}{{/unless}}{{#unless @last}},{{/unless}}
+						}
+						{{~#unless @last}},{{/unless}}
+						{{/unless}}
             {{/each}}
 					]
-				}{{#unless @last}},
-				{{/unless}}
+				}{{#unless @last}},{{/unless}}
       {{/each}}
 			]
 		}{{#unless @last}}, {{/unless}}
