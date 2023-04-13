@@ -252,7 +252,7 @@
 				"backup": false,
 				"name": "BTS_M3_160x600",
 				"html": "BTS_M3.html",
-				"jsToUse": "BTS_M3_300x250.js",
+				"jsToUse": "BTS_M3.js",
 				"headerSvg":"header_M3_160x600.svg",
 				"f2Logo":{ "x":0, "y":198, "scale":0.6 },
 				"frames":[
@@ -280,7 +280,7 @@
 				"approved": false,
 				"backup": false,
 				"html": "BTS_M3.html",
-				"jsToUse": "BTS_M3_300x250.js",
+				"jsToUse": "BTS_M3.js",
 				"headerSvg":"header_M3_300x250.svg",
 				"f2Logo":{ 
 					"x":0, "y":50, "scale":0.4
@@ -310,7 +310,7 @@
 				"backup": false,
 				"name": "BTS_M3_300x600",
 				"html": "BTS_M3.html",
-				"jsToUse": "BTS_M3_300x250.js",
+				"jsToUse": "BTS_M3.js",
 				"headerSvg":"header_M3_300x600.svg",
 				"f2Logo":{ "x":0, "y":209, "scale":0.43 },
 				"frames":[
@@ -338,7 +338,7 @@
 				"backup": false,
 				"name": "BTS_M3_728x90",
 				"html": "BTS_M3.html",
-				"jsToUse": "BTS_M3_300x250.js",
+				"jsToUse": "BTS_M3.js",
 				"headerSvg":"header_M3_728x90.svg",
 				"f2Logo":{ "x":184, "y":-16, "scale":0.46},
 				"frames":[
@@ -356,7 +356,7 @@
 					}
 				],
 				"end": {
-					"logo":{ "y":0, "scale": 0.01},
+					"logo":{ "y":0, "scale": 0.00001},
 					"txt": "Ohio, challenge what you know about mental health."
 				},
 				"width": 728, "height": 90
