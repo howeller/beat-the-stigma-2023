@@ -314,7 +314,7 @@
 					.add(writeInSvgTl(_path, 0.5), 'f2')
 					.from(_path, {fill:'rgba(7,1,51,0.0)'}, 'f2')		
 					.from('#txt2', {alpha:0})
-					.add('f3', '+=4')
+					.add('f3', '+=3.75')
 					.to('#txt2', {alpha:0}, 'f3')
 					.fromTo('#pic3', {clipPath: _clipClosed}, {clipPath: _clipOpen, duration:_clipSpeed, ease:'power3.easein' }, 'f3')
 					.from('#txt3', {alpha:0})
@@ -328,7 +328,7 @@
 					.add('end')
 					.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.4 }, 'end')
 					.add(initReplayAction)
-					.from(replay.container, { autoAlpha: 0 }, 'end+=.3')
+					.from(replay.container, { autoAlpha: 0 }, '-=.3')
 					// .seek('f2');
 					// .seek('f4Out');
 					// .seek('end');
