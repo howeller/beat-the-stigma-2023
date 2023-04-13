@@ -137,7 +137,7 @@
 				"answerDropY": -150,
 				"borderStroke": 2,
 				"frame2":{
-					"logo":{ "x":0, "y":-88, "scale":0.5},
+					"logo":{ "x":0, "y":-71, "scale":0.5},
 					"borderRed": "#fe3131",
 					"redFill": "#4f132f",
 					"fillOpacity": 0.7,
