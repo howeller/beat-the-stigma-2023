@@ -246,10 +246,8 @@
 		}
 		
 		#end-container  {
-			/* position: relative !important; */
 			display: flex;
 		  align-items: center;
-		  /* justify-content: center; */
 		  flex-direction: row;
 		}
 		
@@ -304,7 +302,6 @@
 				<ol id="g1-answers" class="game-txt" type="A">
 					<li>Snap out of it</li>
 					<li>Push through it</li>
-					<li>But your life<br>seems great</li>
 					<li>Everyone<br>gets sad</li>
 				</ol>
 					<!-- Duplicate list of strike throughs -->
@@ -314,9 +311,6 @@
 					</span></li>
 					<li><span class="strike-wrapper">
 						<span class="strikethrough">Push through it</span>
-					</span></li>
-					<li><span class="strike-wrapper">
-						<span class="strikethrough">But your life</span><br><span class="strikethrough">seems great</span>
 					</span></li>
 					<li><span class="strike-wrapper">
 						<span class="strikethrough">Everyone</span><br><span class="strikethrough">gets sad</span>
@@ -329,7 +323,6 @@
 					Supportive things to say to someone living with depression:
 				</p>
 				<ol id="g2-answers" class="game-txt" type="A">
-					<li>I’m here<br>for you</li>
 					<li>You’re not alone</li>
 					<li>How can I<br>support you?</li>
 					<li>Talking to<br>someone<br>could help</li>
@@ -413,7 +406,6 @@
 			
 				tl
 					.add('start')
-					// .set(_path, { fill:'#4f132f'})
 					.from('#banner', { autoAlpha:0, duration:0.3 },'start')
 					// .from('#bts-logo', { scale:0.5, transformOrigin:'50% 50%', alpha:0}, 'start')
 					// .from('#bg1', { scale:1.25, transformOrigin:'50% 50%', alpha:0}, '-=.25')
@@ -423,11 +415,11 @@
 					.from(['#bg2', '#red-overlay'], {alpha:0}, 'f2+=.2')
 					.from([_path], {'fill-opacity':0, ease:'power3.in'}, 'f2+=.2')
 					.from('#question1', {alpha:0}, '-=.3')
-					.add('list1In', '+=.5')
+					.add('list1In', '+=.6')
 					.from('#g1-answers li', { y:-90, duration:0.3, stagger:.05}, 'list1In')
 					// .from('#g1-answers li', { x:-728, duration:0.3, stagger:.05}, 'list1In')
-					.fromTo('#g1-wrong-answers li', {clipPath: clipClosed}, {clipPath: clipOpen, duration:0.8, stagger:0}, 'list1In+=1.5')
-					.add('f2Out','+=2.5')
+					.fromTo('#g1-wrong-answers li', {clipPath: clipClosed}, {clipPath: clipOpen, duration:0.8, stagger:0}, 'list1In+=3')
+					.add('f2Out','+=1')
 					.to('#g1-answers li', {y:90, duration:0.3, stagger:.05}, 'f2Out')
 					.to('#g1-wrong-answers li', {y:90, duration:0.3, stagger:.05}, 'f2Out')
 					.to(['#question1', '#red-overlay'], {alpha:0}, 'f2Out')
@@ -437,7 +429,7 @@
 					.add('list2In', 'f3+=.3')
 					.from('#g2-answers li', { y:-90, duration:0.3, stagger:.05}, 'list2In')
 					// .from('#g2-answers li', { x:-728, duration:0.3, stagger:.1}, 'list2In')
-					.add('f3Out','+=4.75	')
+					.add('f3Out','+=5	')
 					.from(['#end-bg'], {alpha:0}, 'f3Out')
 					.to('#bts-logo',{ scale:0.01, y:0, transformOrigin:'50% 0%', ease:'power3.out' }, 'f3Out')
 					.add('end')

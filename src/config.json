@@ -17,7 +17,7 @@
 				}
 			},
 			"BTS_M1_160x600": {
-				"approved": false,
+				"approved": true,
 				"backup": false,
 				"name": "BTS_M1_160x600",
 				"html": "BTS_M1.html",
@@ -34,7 +34,7 @@
 				"width": 160, "height": 600
 			},
 			"BTS_M1_300x250": {
-				"approved": false,
+				"approved": true,
 				"backup": false,
 				"name": "BTS_M1_300x250",
 				"html": "BTS_M1.html",
@@ -50,7 +50,7 @@
 				"width": 300, "height": 250
 			},
 			"BTS_M1_300x600": {
-				"approved": false,
+				"approved": true,
 				"backup": false,
 				"name": "BTS_M1_300x600",
 				"html": "BTS_M1.html",
@@ -67,7 +67,7 @@
 				"width": 300, "height": 600
 			},
 			"BTS_M1_728x90": {
-				"approved": false,
+				"approved": true,
 				"backup": false,
 				"name": "BTS_M1_728x90",
 				"html": "BTS_M1_Leader.html",
@@ -109,14 +109,12 @@
 					"txt":[
 						"Snap out of it",
 						"Push through it",
-						"But your life seems great",
 						"Everyone gets sad"
 					]
 				},
 				"frame3":{
 					"headerTxt": "Supportive things to<br>say to someone living<br>with depression:",
 					"txt":[
-						"I’m here for you",
 						"You’re not alone",
 						"How can I support you?",
 						"Talking to someone<br>could help"
@@ -129,7 +127,7 @@
 				"width": 160, "height": 600
 			},
 			"BTS_M2_300x250": {
-				"approved": false,
+				"approved": true,
 				"backup": false,
 				"name": "BTS_M2_300x250",
 				"html": "BTS_M2.html",
@@ -180,14 +178,12 @@
 					"txt":[
 						"Snap out of it",
 						"Push through it",
-						"But your life seems great",
 						"Everyone gets sad"
 					]
 				},
 				"frame3":{
 					"headerTxt": "Supportive things to<br>say to someone living<br>with depression:",
 					"txt":[
-						"I’m here for you",
 						"You’re not alone",
 						"How can I support you?",
 						"Talking to someone could help"
@@ -217,20 +213,17 @@
 					"txt":[
 						"Snap out of it",
 						"Push through it",
-						"But your life<br>seems great",
 						"Everyone<br>gets sad"
 					],
 					"strikeList":[
 						"Snap out of it",
 						"Push through it",
-						"But your life</span><br><span class=\"strikethrough\">seems great",
 						"Everyone</span><br><span class=\"strikethrough\">gets sad"
 					]
 				},
 				"frame3":{
 					"headerTxt": "Supportive things to say to someone living with depression:",
 					"txt":[
-						"I’m here<br>for you",
 						"You’re not alone",
 						"How can I<br>support you?",
 						"Talking to<br>someone<br>could help"
