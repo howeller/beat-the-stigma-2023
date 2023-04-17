@@ -15,7 +15,7 @@ var objData = {
 							w: 160,
 							h: 600,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
 							backup: false,
 							manualzip: true
@@ -27,7 +27,7 @@ var objData = {
 							w: 300,
 							h: 250,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
 							backup: false,
 							manualzip: true
@@ -39,7 +39,7 @@ var objData = {
 							w: 300,
 							h: 600,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
 							backup: false,
 							manualzip: true
@@ -51,7 +51,7 @@ var objData = {
 							w: 728,
 							h: 90,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
 							backup: false,
 							manualzip: true
@@ -62,7 +62,7 @@ var objData = {
 					folderName: "html",
 					title: "Message2 - HTML Standard Media",
 					bannerList: [
-						/* {
+						{
 							overwriteSizeDisplay: "", 
 							label: "BTS_M2_160x600",
 							src: "BTS_M2_160x600",
@@ -73,7 +73,7 @@ var objData = {
 							dload: true,
 							backup: false,
 							manualzip: true
-						}, */
+						},
 						{
 							overwriteSizeDisplay: "", 
 							label: "BTS_M2_300x250",
@@ -81,11 +81,11 @@ var objData = {
 							w: 300,
 							h: 250,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
 							backup: false,
 							manualzip: true
-						}/* ,
+						},
 						{
 							overwriteSizeDisplay: "", 
 							label: "BTS_M2_300x600",
@@ -109,7 +109,7 @@ var objData = {
 							dload: true,
 							backup: false,
 							manualzip: true
-						} */
+						}
 					]
 				},
         {	

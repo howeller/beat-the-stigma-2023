@@ -38,8 +38,8 @@ const b1 = ['english', 'Message1'],
 	b2 = ['english', 'Message2'],
 	b3 = ['english', 'Message3'];
 
-const currentGroup = b3,
-	isProduction = false;
+const currentGroup = b2,
+	isProduction = true;
 
 /*
 *	Loop through JSON config 
@@ -96,7 +96,8 @@ function build(version, copyImages=false, showFpoNum=''){
 
 		let _html = gulp.src(dir.templates+'html/main.html.hbs')
 			.pipe(gch(_data, option))
-			.pipe(gulpif(isProduction, htmlmin(minOptions)))
+			// .pipe(gulpif(isProduction, htmlmin(minOptions)))
+			.pipe(gulpif(_data.approved, htmlmin(minOptions)))
 			.pipe(rename('index.html'))
 			.pipe(gulp.dest(_dist));
 
@@ -117,7 +118,6 @@ function build(version, copyImages=false, showFpoNum=''){
 
 // Copy Backup JPGs to build
 function copyBackups(){
-
 	return gulp.src(dir.backups+'*.{png,jpg,gif}')
 	.pipe(rename((path) => util.checkBackupSuffix(path))) // 
 	.pipe(gulp.dest(dir.dist));
@@ -197,8 +197,11 @@ gulp.task('clean:fpo', () => { return del([dir.fpo+'**']); });
 gulp.task('clean:zips', () => { return del([dir.zips+'**']); });
 gulp.task('clean:all', gulp.parallel('clean','clean:zips') );
 
+gulp.task('p', previewCatConfig);
+gulp.task('default', gulp.series('build'));
+
 // Watching
-gulp.task('watch', () => { return gulp.watch([dir.srcBanners+'**/**/*', dir.templates+'**/*', dir.config], gulp.series('build'))});
+gulp.task('watch', () => { return gulp.watch([dir.srcBanners+'**/**/*', dir.templates+'**/*', dir.config], gulp.series('default'))});
 gulp.task('w1', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+'*/**', dir.config], gulp.series('fpo1'))});
 gulp.task('w2', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+'*/**', dir.config], gulp.series('fpo2'))});
 gulp.task('w3', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+'*/**', dir.config], gulp.series('fpo3'))});
@@ -208,7 +211,3 @@ gulp.task('w5', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+
 // Zipping
 // gulp.task('zip1', () => { return zipFiles(b1) });
 // gulp.task('zip', gulp.series('zip1'));
-
-gulp.task('default', gulp.series('build'));
-gulp.task('p', previewCatConfig);
-// gulp.task('p', () => { return previewCatConfig(b1) });
