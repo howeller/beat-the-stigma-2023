@@ -156,7 +156,7 @@
 		}
 		
 		.game-wrapper, svg#header-back  {
-			margin: 148px 5px;
+			margin: 175px 5px;
 			width: 150px;
 		}
 		
@@ -381,7 +381,7 @@
 					// .from('#bts-logo', { scale:0.5, transformOrigin:'50% 50%', alpha:0}, 'start')
 					// .from('#bg1', { scale:1.25, transformOrigin:'50% 50%', alpha:0}, '-=.25')
 					.add('f2','+=.8' )
-					.to('#bts-logo',{ scale: 0.62, y:-146, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
+					.to('#bts-logo',{ scale: 0.62, y:-119, transformOrigin:'50% 0%', duration:1, ease:'power3.out' }, 'f2')
 					.add(writeInSvgTl(_path, 0.5), 'f2+=.2')
 					.from(['#bg2', '#red-overlay'], {alpha:0}, 'f2+=.2')
 					.from([_path], {'fill-opacity':0, ease:'power3.in'}, 'f2+=.2')
@@ -391,6 +391,7 @@
 					// .from('#g1-answers li', { x:-160, duration:0.3, stagger:.05}, 'list1In')
 					.fromTo('#g1-wrong-answers li', {clipPath: clipClosed}, {clipPath: clipOpen, duration:0.8, stagger:0}, 'list1In+=3')
 					.add('f2Out','+=1')
+					.set('#g1-answers', {overflow:'visible'})
 					.to('#g1-answers li', {x:160, duration:0.3, stagger:.05}, 'f2Out')
 					.to('#g1-wrong-answers li', {x:160, duration:0.3, stagger:.05}, 'f2Out')
 					.to(['#question1', '#red-overlay'], {alpha:0}, 'f2Out')

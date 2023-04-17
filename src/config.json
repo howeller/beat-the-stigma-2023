@@ -101,7 +101,7 @@
 				"answerDropY": -225,
 				"borderStroke": 2,
 				"frame2":{
-					"logo":{ "x":0, "y":-146, "scale":0.62},
+					"logo":{ "x":0, "y":-119, "scale":0.62},
 					"borderRed": "#fe3131",
 					"redFill": "#4f132f",
 					"fillOpacity": 0.7,
@@ -170,7 +170,7 @@
 				"answerDropY": -250,
 				"borderStroke": 3,
 				"frame2":{
-					"logo":{ "x":0, "y":-145, "scale":0.44},
+					"logo":{ "x":0, "y":-121, "scale":0.44},
 					"borderRed": "#ed2024",
 					"redFill": "#4b132f",
 					"fillOpacity": 0.9,
