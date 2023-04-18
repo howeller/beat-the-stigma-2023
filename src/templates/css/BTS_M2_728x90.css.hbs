@@ -35,7 +35,6 @@ svg#header-back {
 .game-txt {
 	font-size: 14px;
 	line-height: 15px;
-  /* letter-spacing: -1px; */
 	{{~#if (showFpo)}}color: green !important;{{/if~}}
 }
 p.header-txt {
@@ -50,17 +49,15 @@ ol {
 	display: flex;
   flex-direction: row;
 	position: absolute;
-	/* overflow: hidden; */
 	width: 100%;
   top: 25px;
   left: 241px;
-	/* margin-top: 1px; */
 }
 
 li {
 	width: 154px;
 	height: 58px;
-	border-radius: 8px;
+	border-radius: 5px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -79,7 +76,6 @@ li {
 
 #g1-answers li {
 	background-color: rgba(75, 19, 47, {{frame2.fillOpacity}});
-	/* background-color: rgba(79, 19, 47, 0.7); */
 }
 #g2-answers li {
 	background-color: {{group.blueFill}};
@@ -95,7 +91,6 @@ span.strike-wrapper {
 
 #g1-wrong-answers li span.strikethrough::after {
 	position: absolute;
-  /* display: block; */
 	border-top: 1px solid white;
 	background-color: white;
 	content: ' ';
@@ -122,7 +117,6 @@ span.strike-wrapper {
 	line-height: 12px;
   text-align: left;
   letter-spacing: -0.2px;
-	/* margin: 0 56px 30px; */
   margin-left: 56px;
   margin-right: 33px;
 	{{~#if (showFpo)}}color: red;{{/if}}

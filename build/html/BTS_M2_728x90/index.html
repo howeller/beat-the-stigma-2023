@@ -171,8 +171,7 @@
 		
 		.game-txt {
 			font-size: 14px;
-			line-height: 15px;
-		  /* letter-spacing: -1px; */}
+			line-height: 15px;}
 		p.header-txt {
 		  display: inline-block;
 		  position: absolute;
@@ -185,17 +184,15 @@
 			display: flex;
 		  flex-direction: row;
 			position: absolute;
-			/* overflow: hidden; */
 			width: 100%;
 		  top: 25px;
 		  left: 241px;
-			/* margin-top: 1px; */
 		}
 		
 		li {
 			width: 154px;
 			height: 58px;
-			border-radius: 8px;
+			border-radius: 5px;
 			box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
@@ -214,7 +211,6 @@
 		
 		#g1-answers li {
 			background-color: rgba(75, 19, 47, 0.7);
-			/* background-color: rgba(79, 19, 47, 0.7); */
 		}
 		#g2-answers li {
 			background-color: rgba(7,1,51,0.5);
@@ -229,7 +225,6 @@
 		
 		#g1-wrong-answers li span.strikethrough::after {
 			position: absolute;
-		  /* display: block; */
 			border-top: 1px solid white;
 			background-color: white;
 			content: ' ';
@@ -256,7 +251,6 @@
 			line-height: 12px;
 		  text-align: left;
 		  letter-spacing: -0.2px;
-			/* margin: 0 56px 30px; */
 		  margin-left: 56px;
 		  margin-right: 33px;
 		}
@@ -302,19 +296,13 @@
 				<ol id="g1-answers" class="game-txt" type="A">
 					<li>Snap out of it</li>
 					<li>Push through it</li>
-					<li>Everyone<br>gets sad</li>
+					<li>Everyone gets sad</li>
 				</ol>
 					<!-- Duplicate list of strike throughs -->
 				<ol id="g1-wrong-answers" class="game-txt" type="A" aria-hidden="true">
-					<li><span class="strike-wrapper">
-						<span class="strikethrough">Snap out of it</span>
-					</span></li>
-					<li><span class="strike-wrapper">
-						<span class="strikethrough">Push through it</span>
-					</span></li>
-					<li><span class="strike-wrapper">
-						<span class="strikethrough">Everyone</span><br><span class="strikethrough">gets sad</span>
-					</span></li>
+					<li><span class="strikethrough">Snap out of it</span></li>
+					<li><span class="strikethrough">Push through it</span></li>
+					<li><span class="strikethrough">Everyone gets sad</span></li>
 				</ol>
 			</div>
 			
@@ -325,7 +313,7 @@
 				<ol id="g2-answers" class="game-txt" type="A">
 					<li>You’re not alone</li>
 					<li>How can I<br>support you?</li>
-					<li>Talking to<br>someone<br>could help</li>
+					<li>Talking to someone<br>could help</li>
 				</ol>
 			</div>
 		</div>
@@ -431,7 +419,7 @@
 					// .from('#g2-answers li', { x:-728, duration:0.3, stagger:.1}, 'list2In')
 					.add('f3Out','+=5	')
 					.from(['#end-bg'], {alpha:0}, 'f3Out')
-					.to('#bts-logo',{ scale:0.01, y:0, transformOrigin:'50% 0%', ease:'power3.out' }, 'f3Out')
+					.to('#bts-logo',{ scale:0.00001, y:0, transformOrigin:'50% 0%', ease:'power3.out' }, 'f3Out')
 					.add('end')
 					.from(['#end-txt','#ohio-logo','#cta'], { alpha:0, stagger:0.5 }, 'end')
 					.add(initReplayAction)

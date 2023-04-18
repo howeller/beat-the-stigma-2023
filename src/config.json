@@ -213,9 +213,9 @@
 					"txt":[
 						"Snap out of it",
 						"Push through it",
-						"Everyone<br>gets sad"
+						"Everyone gets sad"
 					],
-					"strikeList":[
+					"_strikeList":[
 						"Snap out of it",
 						"Push through it",
 						"Everyone</span><br><span class=\"strikethrough\">gets sad"
@@ -226,11 +226,11 @@
 					"txt":[
 						"You’re not alone",
 						"How can I<br>support you?",
-						"Talking to<br>someone<br>could help"
+						"Talking to someone<br>could help"
 					]
 				},
 				"end": {
-					"logo":{ "y":0, "scale": 0.01},
+					"logo":{ "y":0, "scale": 0.00001},
 					"txt": ["Ohio, challenge what you know about mental health."]
 				},
 				"width": 728, "height": 90
