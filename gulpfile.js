@@ -38,7 +38,7 @@ const b1 = ['english', 'Message1'],
 	b2 = ['english', 'Message2'],
 	b3 = ['english', 'Message3'];
 
-const currentGroup = b2,
+const currentGroup = b3,
 	isProduction = true;
 
 /*
@@ -86,6 +86,7 @@ function build(version, copyImages=false, showFpoNum=''){
 				letterCount: function(index){ return parseInt(index) + 7 }, // Returns int for line2 of letters
 				frameCount: function(index){ return parseInt(index) + 2 }, // Returns int frame# starting at 2
 				getLetterClass: function(scope, index){ return scope.group.frame2.hiddenLetters.includes(index) ? 'missing-letters': 'init-letters'; },
+				getGroupAltTxt: function (scope, index) { return scope.group.alt[index] },
 				if_eq: helper.if_eq,
 				int: helper.int,
 				times: helper.times
@@ -209,5 +210,7 @@ gulp.task('w4', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+
 gulp.task('w5', () => { return gulp.watch([dir.srcBanners+'*/**', dir.templates+'*/**', dir.config], gulp.series('fpo5'))});
 
 // Zipping
-// gulp.task('zip1', () => { return zipFiles(b1) });
-// gulp.task('zip', gulp.series('zip1'));
+gulp.task('zip1', () => { return zipFiles(b1) });
+gulp.task('zip2', () => { return zipFiles(b2) });
+gulp.task('zip3', () => { return zipFiles(b3) });
+gulp.task('zip', gulp.series('zip1', 'zip2', 'zip3'));

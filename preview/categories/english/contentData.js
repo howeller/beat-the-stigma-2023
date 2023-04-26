@@ -69,7 +69,7 @@ var objData = {
 							w: 160,
 							h: 600,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
 							backup: false,
 							manualzip: true
@@ -93,7 +93,7 @@ var objData = {
 							w: 300,
 							h: 600,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
 							backup: false,
 							manualzip: true
@@ -105,7 +105,7 @@ var objData = {
 							w: 728,
 							h: 90,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
 							backup: false,
 							manualzip: true

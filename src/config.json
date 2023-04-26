@@ -92,7 +92,7 @@
 				"replayColor":"rgba(255,255,255,0.7)"
 			},
 			"BTS_M2_160x600": {
-				"approved": false,
+				"approved": true,
 				"backup": false,
 				"name": "BTS_M2_160x600",
 				"html": "BTS_M2.html",
@@ -161,7 +161,7 @@
 				"width": 300, "height": 250
 			},
 			"BTS_M2_300x600": {
-				"approved": false,
+				"approved": true,
 				"backup": false,
 				"name": "BTS_M2_300x600",
 				"html": "BTS_M2.html",
@@ -196,7 +196,7 @@
 				"width": 300, "height": 600
 			},
 			"BTS_M2_728x90": {
-				"approved": false,
+				"approved": true,
 				"backup": false,
 				"name": "BTS_M2_728x90",
 				"html": "BTS_M2.html",
@@ -238,7 +238,12 @@
 		},
 		"Message3":{
 			"group":{
-				"replayColor":"rgba(255,255,255,0.7)"
+				"replayColor":"rgba(255,255,255,0.7)",
+				"alt":[
+					"Game-show host ready to read a question",
+					"Game-show contestant answers",
+					"Other Game-show contestant answers"
+				]
 			},
 			"BTS_M3_160x600": {
 				"approved": false,
