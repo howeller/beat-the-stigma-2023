@@ -18,10 +18,7 @@
 ---
 ### Dev Overview
 - All typography is a Google webfont. All images are inlined SVG.
-- Message 2 & 3 quizes with strikethoughs have duplicate ordered lists. The 1st list shows the initial answers. The 2nd list has the wrong answers with the strikethroughs as psuedo elements and stacks directly on top of the 1st list. I did this because psuedo elements cannot be animated because they are not part of the DOM apparently. Using lists ensure the text will always maintain correct spacing no matter how the browser renders the font.
-- The highlighted answers use a custom left margin property to accommodate their.
-- Message 2 + 3 share the same animation & CSS templates, but have a couple custom properties injected from the config.
-- The positions of the end frame copy on most units are intentionally unique per creative direction.
+- All banners passed an ADA QA review. Some concepts require spans with descriptive text of the photos to be mixed in with the copy. This reads better than using alt txt in the layout.
 
 ---
 ### HTML Build Notes
@@ -41,9 +38,9 @@ npm install
 Task Name    | What it Does
 -------------|-----------
 `backups` | Copies and compresses all backup PNGs.
-`build1` | Compiles template & partials for all HTML/CSS/JS for Message 1 banners.
-`build2` | Compiles template & partials for all HTML/CSS/JS for Message 2 banners.
-`build3` | Compiles template & partials for all HTML/CSS/JS for Message 3 banners.
+`b1` | Compiles template & partials for all HTML/CSS/JS for Message 1 banners.
+`b2` | Compiles template & partials for all HTML/CSS/JS for Message 2 banners.
+`b3` | Compiles template & partials for all HTML/CSS/JS for Message 3 banners.
 `build` | Runs `b1` `b2` & `b3` in a series.
 `all` | Runs `clean:html`, `b1` `b2` & `b3` in a series.
 `clean` | Deletes all files inside `build/html/` & `build/zips/`.
