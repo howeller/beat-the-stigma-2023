@@ -18,7 +18,7 @@
 			},
 			"BTS_M1_160x600": {
 				"approved": true,
-				"backup": false,
+				"backup": "png",
 				"name": "BTS_M1_160x600",
 				"html": "BTS_M1.html",
 				"jsToUse": "BTS_M1_Skyscraper.js",
@@ -35,7 +35,7 @@
 			},
 			"BTS_M1_300x250": {
 				"approved": true,
-				"backup": false,
+				"backup": "png",
 				"name": "BTS_M1_300x250",
 				"html": "BTS_M1.html",
 				"jsToUse": "BTS_M1_Skyscraper.js",
@@ -51,7 +51,7 @@
 			},
 			"BTS_M1_300x600": {
 				"approved": true,
-				"backup": false,
+				"backup": "png",
 				"name": "BTS_M1_300x600",
 				"html": "BTS_M1.html",
 				"jsToUse": "BTS_M1_Skyscraper.js",
@@ -68,7 +68,7 @@
 			},
 			"BTS_M1_728x90": {
 				"approved": true,
-				"backup": false,
+				"backup": "png",
 				"name": "BTS_M1_728x90",
 				"html": "BTS_M1_Leader.html",
 				"jsToUse": "BTS_M1_Leader.js",
@@ -93,7 +93,7 @@
 			},
 			"BTS_M2_160x600": {
 				"approved": true,
-				"backup": false,
+				"backup": true,
 				"name": "BTS_M2_160x600",
 				"html": "BTS_M2.html",
 				"jsToUse": "BTS_M2.js",
@@ -128,7 +128,7 @@
 			},
 			"BTS_M2_300x250": {
 				"approved": true,
-				"backup": false,
+				"backup": true,
 				"name": "BTS_M2_300x250",
 				"html": "BTS_M2.html",
 				"jsToUse": "BTS_M2.js",
@@ -162,7 +162,7 @@
 			},
 			"BTS_M2_300x600": {
 				"approved": true,
-				"backup": false,
+				"backup": true,
 				"name": "BTS_M2_300x600",
 				"html": "BTS_M2.html",
 				"jsToUse": "BTS_M2.js",
@@ -197,7 +197,7 @@
 			},
 			"BTS_M2_728x90": {
 				"approved": true,
-				"backup": false,
+				"backup": true,
 				"name": "BTS_M2_728x90",
 				"html": "BTS_M2.html",
 				"jsToUse": "BTS_M2.js",
@@ -246,8 +246,8 @@
 				]
 			},
 			"BTS_M3_160x600": {
-				"approved": false,
-				"backup": false,
+				"approved": true,
+				"backup": true,
 				"name": "BTS_M3_160x600",
 				"html": "BTS_M3.html",
 				"jsToUse": "BTS_M3.js",
@@ -275,8 +275,8 @@
 			},
 			"BTS_M3_300x250": {
 				"name": "BTS_M3_300x250",
-				"approved": false,
-				"backup": false,
+				"approved": true,
+				"backup": true,
 				"html": "BTS_M3.html",
 				"jsToUse": "BTS_M3.js",
 				"headerSvg":"header_M3_300x250.svg",
@@ -304,8 +304,8 @@
 				"width": 300, "height": 250
 			},
 			"BTS_M3_300x600": {
-				"approved": false,
-				"backup": false,
+				"approved": true,
+				"backup": true,
 				"name": "BTS_M3_300x600",
 				"html": "BTS_M3.html",
 				"jsToUse": "BTS_M3.js",
@@ -332,8 +332,8 @@
 				"width": 300, "height": 600
 			},
 			"BTS_M3_728x90": {
-				"approved": false,
-				"backup": false,
+				"approved": true,
+				"backup": true,
 				"name": "BTS_M3_728x90",
 				"html": "BTS_M3.html",
 				"jsToUse": "BTS_M3.js",

@@ -17,7 +17,7 @@ var objData = {
 							type: "html5",
 							approved: true,
 							dload: true,
-							backup: false,
+							backup: "png",
 							manualzip: true
 						},
 						{
@@ -29,7 +29,7 @@ var objData = {
 							type: "html5",
 							approved: true,
 							dload: true,
-							backup: false,
+							backup: "png",
 							manualzip: true
 						},
 						{
@@ -41,7 +41,7 @@ var objData = {
 							type: "html5",
 							approved: true,
 							dload: true,
-							backup: false,
+							backup: "png",
 							manualzip: true
 						},
 						{
@@ -53,7 +53,7 @@ var objData = {
 							type: "html5",
 							approved: true,
 							dload: true,
-							backup: false,
+							backup: "png",
 							manualzip: true
 						}
 					]
@@ -71,7 +71,7 @@ var objData = {
 							type: "html5",
 							approved: true,
 							dload: true,
-							backup: false,
+							backup: "true",
 							manualzip: true
 						},
 						{
@@ -83,7 +83,7 @@ var objData = {
 							type: "html5",
 							approved: true,
 							dload: true,
-							backup: false,
+							backup: "true",
 							manualzip: true
 						},
 						{
@@ -95,7 +95,7 @@ var objData = {
 							type: "html5",
 							approved: true,
 							dload: true,
-							backup: false,
+							backup: "true",
 							manualzip: true
 						},
 						{
@@ -107,7 +107,7 @@ var objData = {
 							type: "html5",
 							approved: true,
 							dload: true,
-							backup: false,
+							backup: "true",
 							manualzip: true
 						}
 					]
@@ -123,9 +123,9 @@ var objData = {
 							w: 160,
 							h: 600,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
-							backup: false,
+							backup: "true",
 							manualzip: true
 						},
 						{
@@ -135,9 +135,9 @@ var objData = {
 							w: 300,
 							h: 250,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
-							backup: false,
+							backup: "true",
 							manualzip: true
 						},
 						{
@@ -147,9 +147,9 @@ var objData = {
 							w: 300,
 							h: 600,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
-							backup: false,
+							backup: "true",
 							manualzip: true
 						},
 						{
@@ -159,9 +159,9 @@ var objData = {
 							w: 728,
 							h: 90,
 							type: "html5",
-							approved: false,
+							approved: true,
 							dload: true,
-							backup: false,
+							backup: "true",
 							manualzip: true
 						}
 					]
