@@ -1,11 +1,11 @@
 <div class="sr-only">BEAT THE STIGMA</div>
 <div id="f1-container" class="full-size">
-	{{~#unless (showFpo)}}<img id="bg1" class="full-size" src="images/bg1_2x.jpg" alt="Game-show host"/>{{/unless}}
+	{{~#unless (showFpo)}}<img id="bg1" class="full-size" src="bg1_2x.jpg" alt="Game-show host"/>{{/unless}}
 	{{#if (showFpo)}}<img src="../../fpo/{{name}}/{{getFpoName}}" class="full-size" width="{{width}}" />{{/if}}
 </div>
 
 <div id="f2-container" class="full-size">
-	<img id="bg2" class="full-size" src="images/bg2_2x.jpg" alt=""/>
+	<img id="bg2" class="full-size" src="bg2_2x.jpg" alt=""/>
 	<div id="red-overlay" class="bg-blend full-size"></div>
 		{{#if (showFpo)}}<img src="../../fpo/{{name}}/{{getFpoName}}" class="full-size" width="{{width}}" />{{/if}}
 		{{> (getHeaderSvg)}}
@@ -48,7 +48,7 @@
 
 {{#unless (isBox)}}
 {{#unless (showFpo)}}
-<img id="end-bg" class="full-size" src="images/bg3_2x.jpg" alt=""/>
+<img id="end-bg" class="full-size" src="bg3_2x.jpg" alt=""/>
 {{/unless}}
 {{/unless}}
 <div id="end-container" class="full-size">
@@ -66,5 +66,5 @@
 </div>
 
 <div id="logo-container" class="full-size">
-	<img id="bts-logo" src="images/logo_2x.png" alt="BEAT THE STIGMA" aria-hidden="true"/>
+	<img id="bts-logo" src="logo_2x.png" alt="BEAT THE STIGMA" aria-hidden="true"/>
 </div>

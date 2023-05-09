@@ -103,7 +103,7 @@ function build(version, copyImages=false, showFpoNum=''){
 			.pipe(gulp.dest(_dist));
 
 		if(copyImages){
-			let _images = gulp.src([_sharedImages+'/**', `${_src}/images/**`]).pipe(gulp.dest(_dist+'/images/'));
+			let _images = gulp.src([_sharedImages+'/**', `${_src}/images/**`]).pipe(gulp.dest(_dist));
 
 			if(showFpoNum){
 				let _fpoDir = util.mkDirByPathSync(path.join(dir.fpo, _data.name));
@@ -183,6 +183,7 @@ gulp.task('bi3', () => { return build(b3, true, '') });
 
 
 gulp.task('all', gulp.series('b1', 'b2', 'b3'));
+gulp.task('all:images', gulp.series('bi1', 'bi2', 'bi3', 'backups'));
 
 // Inject FPO JPGs to check alignment
 gulp.task('fpo1', () => { return build(currentGroup, true, '1')});
