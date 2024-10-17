@@ -1,7 +1,4 @@
 node_modules/*
 PSD/*
 project/*
-src/backups/*
-src/**/fpo/*
-build/fpo/*
 build/html/*/*.map
